@@ -1,0 +1,22 @@
+#include"ipch.h"
+void PrintValue(int value)
+{
+    std::cout << "Value: " << value << std::endl;
+}
+
+void ForEach(const std::vector<int>& values, void(*func)(int))
+{
+    for (int value : values)
+    {
+        func(value);
+    }
+}
+
+int main()
+{
+    std::vector<int> values = { 1, 5, 4, 2, 3 };
+    ForEach(values, PrintValue);//也可以将PrintValue写成\
+    [](int){函数主体}    表示一个仅在此处使用的代码，[]表示捕获
+
+    std::cin.get();
+}
