@@ -1,4 +1,4 @@
-#include <vector>
+ï»¿#include <vector>
 #include <string>
 #include<iostream>
 
@@ -8,15 +8,15 @@ void test01()
 	for (int i = 0; i < 10; i++) {
 		v.push_back(i + 1);
 	}
-	//²éÕÒÈİÆ÷ÖĞÊÇ·ñÓĞ 5 Õâ¸öÔªËØ
+	//æŸ¥æ‰¾å®¹å™¨ä¸­æ˜¯å¦æœ‰ 5 è¿™ä¸ªå…ƒç´ 
 	std::vector<int>::iterator it = find(v.begin(), v.end(), 5);
 	if (it == v.end())
 	{
-		std::cout << "Ã»ÓĞÕÒµ½!" << std::endl;
+		std::cout << "æ²¡æœ‰æ‰¾åˆ°!" << std::endl;
 	}
 	else
 	{
-		std::cout << "ÕÒµ½:" << *it << std::endl;
+		std::cout << "æ‰¾åˆ°:" << *it << std::endl;
 	}
 }
 
@@ -47,14 +47,14 @@ void test02()
 	v.push_back(p3);
 	v.push_back(p4);
 
-	std::vector<Person>::iterator it = find(v.begin(), v.end(), p2);//´Ë´¦ÓĞ±È½Ï£¬ËùÒÔÖ®Ç°ÒªÖØÔØ==
+	std::vector<Person>::iterator it = find(v.begin(), v.end(), p2);//æ­¤å¤„æœ‰æ¯”è¾ƒï¼Œæ‰€ä»¥ä¹‹å‰è¦é‡è½½==
 	if (it == v.end())
 	{
-		std::cout << "Ã»ÓĞÕÒµ½!" << std::endl;
+		std::cout << "æ²¡æœ‰æ‰¾åˆ°!" << std::endl;
 	}
 	else
 	{
-		std::cout << "ÕÒµ½ĞÕÃû:" << it->m_Name << " ÄêÁä: " << it->m_Age << std::endl;
+		std::cout << "æ‰¾åˆ°å§“å:" << it->m_Name << " å¹´é¾„: " << it->m_Age << std::endl;
 	}
 }
 
@@ -63,3 +63,4 @@ int main()
 	test01();
 	test02();
 }
+

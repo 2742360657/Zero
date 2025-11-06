@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 
@@ -11,17 +11,17 @@ public:
 	}
 };
 
-//ÄÚÖÃÊı¾İÀàĞÍ
+//å†…ç½®æ•°æ®ç±»å‹
 void test01()
 {
 	std::vector<int> v = {1,2,4,5,3,4,4,21,33};
 
 	int num = std::count_if(v.begin(), v.end(), Greater());
 
-	std::cout << "´óÓÚ4µÄ¸öÊıÎª£º " << num << std::endl;
+	std::cout << "å¤§äº4çš„ä¸ªæ•°ä¸ºï¼š " << num << std::endl;
 }
 
-//×Ô¶¨ÒåÊı¾İÀàĞÍ
+//è‡ªå®šä¹‰æ•°æ®ç±»å‹
 class Person
 {
 public:
@@ -47,11 +47,11 @@ void test02()
 {
 	std::vector<Person> v;
 
-	Person p1("Áõ±¸", 35);
-	Person p2("¹ØÓğ", 35);
-	Person p3("ÕÅ·É", 35);
-	Person p4("ÕÔÔÆ", 30);
-	Person p5("²Ü²Ù", 25);
+	Person p1("åˆ˜å¤‡", 35);
+	Person p2("å…³ç¾½", 35);
+	Person p3("å¼ é£", 35);
+	Person p4("èµµäº‘", 30);
+	Person p5("æ›¹æ“", 25);
 
 	v.push_back(p1);
 	v.push_back(p2);
@@ -60,7 +60,7 @@ void test02()
 	v.push_back(p5);
 
 	int num = count_if(v.begin(), v.end(), AgeLess35());
-	std::cout << "Ğ¡ÓÚ35ËêµÄ¸öÊı£º" << num << std::endl;
+	std::cout << "å°äº35å²çš„ä¸ªæ•°ï¼š" << num << std::endl;
 }
 
 
@@ -69,3 +69,4 @@ int main()
 	test01();
 	test02();
 }
+

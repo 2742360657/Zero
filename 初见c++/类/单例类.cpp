@@ -1,5 +1,5 @@
-#include"ipch.h"
-/* Ğ§¹ûÓëÏÂÃæµÄclassÏàÍ¬
+ï»¿#include<iostream>
+/* æ•ˆæœä¸ä¸‹é¢çš„classç›¸åŒ
 class Singleton
 {
 private:
@@ -20,7 +20,7 @@ Singleton* Singleton::s_Instance = nullptr;
 class Singleton
 {
 public:
-	static Singleton& Get()//Ö»ÓĞÔÚµÚÒ»´Îµ÷ÓÃÊ±»á´´½¨ÊµÀı£¬ºóĞøµ÷ÓÃ¶¼»á·µ»ØÒÑ´æÔÚµÄÊµÀı
+	static Singleton& Get()//åªæœ‰åœ¨ç¬¬ä¸€æ¬¡è°ƒç”¨æ—¶ä¼šåˆ›å»ºå®ä¾‹ï¼Œåç»­è°ƒç”¨éƒ½ä¼šè¿”å›å·²å­˜åœ¨çš„å®ä¾‹
 	{
 		static Singleton instance;
 		return instance;
@@ -36,3 +36,4 @@ int main()
 	Singleton::Get().Hello();
 
 }
+

@@ -1,45 +1,45 @@
-#include<iostream>
+ï»¿#include<iostream>
 
 class String
 {
 private:
-	char* m_Data;       // ÓÃÓÚ´æ´¢×Ö·û´®Êı¾İµÄ¶¯Ì¬Êı×é
-	uint32_t m_Size;    // ´æ´¢×Ö·û´®µÄ³¤¶È
+	char* m_Data;       // ç”¨äºå­˜å‚¨å­—ç¬¦ä¸²æ•°æ®çš„åŠ¨æ€æ•°ç»„
+	uint32_t m_Size;    // å­˜å‚¨å­—ç¬¦ä¸²çš„é•¿åº¦
 
 public:
 	String() = default;
 
-	String(const char* string)// ¹¹Ôìº¯Êı£¬´ÓC·ç¸ñ×Ö·û´®³õÊ¼»¯String¶ÔÏó
+	String(const char* string)// æ„é€ å‡½æ•°ï¼Œä»Cé£æ ¼å­—ç¬¦ä¸²åˆå§‹åŒ–Stringå¯¹è±¡
 	{
 		printf("Created!\n");
-		m_Size = strlen(string);  // ¼ÆËã×Ö·û´®³¤¶È
-		m_Data = new char[m_Size]; // ·ÖÅäÄÚ´æ
-		memcpy(m_Data, string, m_Size); // ¸´ÖÆ×Ö·û´®Êı¾İ
+		m_Size = strlen(string);  // è®¡ç®—å­—ç¬¦ä¸²é•¿åº¦
+		m_Data = new char[m_Size]; // åˆ†é…å†…å­˜
+		memcpy(m_Data, string, m_Size); // å¤åˆ¶å­—ç¬¦ä¸²æ•°æ®
 	}
 
-	String(const String& other) // ¿½±´¹¹Ôìº¯Êı£¬ÓÃÓÚ´´½¨String¶ÔÏóµÄ¸±±¾
+	String(const String& other) // æ‹·è´æ„é€ å‡½æ•°ï¼Œç”¨äºåˆ›å»ºStringå¯¹è±¡çš„å‰¯æœ¬
 	{
 		printf("Copied!\n");
-		m_Size = other.m_Size; // ¸´ÖÆ³¤¶È
-		m_Data = new char[m_Size]; // ·ÖÅäÄÚ´æ
-		memcpy(m_Data, other.m_Data, m_Size); // ¸´ÖÆ×Ö·û´®Êı¾İ
+		m_Size = other.m_Size; // å¤åˆ¶é•¿åº¦
+		m_Data = new char[m_Size]; // åˆ†é…å†…å­˜
+		memcpy(m_Data, other.m_Data, m_Size); // å¤åˆ¶å­—ç¬¦ä¸²æ•°æ®
 	}
 
-	String(String&& other) noexcept// ÒÆ¶¯¹¹Ôìº¯Êı£¬ÓÃÓÚÒÆ¶¯String¶ÔÏóµÄ×ÊÔ´
+	String(String&& other) noexcept// ç§»åŠ¨æ„é€ å‡½æ•°ï¼Œç”¨äºç§»åŠ¨Stringå¯¹è±¡çš„èµ„æº
 	{
 		printf("Move!\n");
-		m_Size = other.m_Size; // ¸´ÖÆ³¤¶È
-		m_Data = other.m_Data; // ½Ó¹Ü×ÊÔ´
-		other.m_Data = nullptr; // Çå³ıÔ­¶ÔÏóµÄ×ÊÔ´Ö¸Õë
-		other.m_Size = 0; // ÖØÖÃÔ­¶ÔÏóµÄ´óĞ¡
+		m_Size = other.m_Size; // å¤åˆ¶é•¿åº¦
+		m_Data = other.m_Data; // æ¥ç®¡èµ„æº
+		other.m_Data = nullptr; // æ¸…é™¤åŸå¯¹è±¡çš„èµ„æºæŒ‡é’ˆ
+		other.m_Size = 0; // é‡ç½®åŸå¯¹è±¡çš„å¤§å°
 	}
 
-	String& operator=(String&& other) noexcept//½«=¶¨ÒåÎªÒÆ¶¯²Ù×÷
+	String& operator=(String&& other) noexcept//å°†=å®šä¹‰ä¸ºç§»åŠ¨æ“ä½œ
 	{
-		if (this != &other)//·ÀÖ¹×ÔÉíÇå³ıºóÎŞ·¨¸´ÖÆ
+		if (this != &other)//é˜²æ­¢è‡ªèº«æ¸…é™¤åæ— æ³•å¤åˆ¶
 		{
 			printf("Move!\n");
-			delete[] m_Data;//Çå³ıµ±Ç°¶ÔÏóÒÑÓĞµÄÊı¾İ
+			delete[] m_Data;//æ¸…é™¤å½“å‰å¯¹è±¡å·²æœ‰çš„æ•°æ®
 			m_Size = other.m_Size;
 			m_Data = other.m_Data;
 			other.m_Data = nullptr;
@@ -70,12 +70,12 @@ private:
 
 public:
 	Entity(const String& name)
-		: m_Name(name) // Ê¹ÓÃ¿½±´³õÊ¼»¯
+		: m_Name(name) // ä½¿ç”¨æ‹·è´åˆå§‹åŒ–
 	{
 	}
 
-	Entity(String&& name)// ¹¹Ôìº¯Êı£¬½ÓÊÜÒ»¸öÓÒÖµÒıÓÃString¶ÔÏó×÷Îª²ÎÊı
-		: m_Name(std::move(name)) // Ê¹ÓÃÒÆ¶¯³õÊ¼»¯    ÕâÀïÓ¦¸ÃÊÇ½«nameÏÔÊ½Îª&&À´Ê¹ÓÃ£¬·ñÔò»áµ÷ÓÃÎªconst String& other
+	Entity(String&& name)// æ„é€ å‡½æ•°ï¼Œæ¥å—ä¸€ä¸ªå³å€¼å¼•ç”¨Stringå¯¹è±¡ä½œä¸ºå‚æ•°
+		: m_Name(std::move(name)) // ä½¿ç”¨ç§»åŠ¨åˆå§‹åŒ–    è¿™é‡Œåº”è¯¥æ˜¯å°†nameæ˜¾å¼ä¸º&&æ¥ä½¿ç”¨ï¼Œå¦åˆ™ä¼šè°ƒç”¨ä¸ºconst String& other
 	{
 	}
 
@@ -87,11 +87,12 @@ public:
 
 int main()
 {
-	Entity en("¿É°®µÄËÕÜç");; // Ö±½Óµ÷ÓÃ String µÄcreatÔÚ¶ÑÉÏ´´½¨Ò»¸öÁÙÊ±¶ÔÏó£¬È»ºóEntityµÄ¹¹Ôìº¯Êı½ÓÊÜ String&& ²ÎÊı£¬ÈÃÊµÀı½Ó¹ÜÁÙÊ±¶ÔÏó
-	String st("Ï²»¶Äó");
+	Entity en("å¯çˆ±çš„è‹èŒœ");; // ç›´æ¥è°ƒç”¨ String çš„creatåœ¨å †ä¸Šåˆ›å»ºä¸€ä¸ªä¸´æ—¶å¯¹è±¡ï¼Œç„¶åEntityçš„æ„é€ å‡½æ•°æ¥å— String&& å‚æ•°ï¼Œè®©å®ä¾‹æ¥ç®¡ä¸´æ—¶å¯¹è±¡
+	String st("å–œæ¬¢æ");
 	String fb;
-	fb = std::move(st);//std::moveÊÇ½«Ò»¸ö¶ÔÏó×ª»»ÎªÁÙÊ±¶ÔÏó
-	//Èç¹ûÖ±½ÓĞ´³É String fb = std::move(st); ¾Í²»ÊÇ²Ù×÷ÔËËã·û£¬¶øÊÇµ÷ÓÃmoveº¯Êı
+	fb = std::move(st);//std::moveæ˜¯å°†ä¸€ä¸ªå¯¹è±¡è½¬æ¢ä¸ºä¸´æ—¶å¯¹è±¡
+	//å¦‚æœç›´æ¥å†™æˆ String fb = std::move(st); å°±ä¸æ˜¯æ“ä½œè¿ç®—ç¬¦ï¼Œè€Œæ˜¯è°ƒç”¨moveå‡½æ•°
 	st.Print();
 	en.PrintName();
 }
+

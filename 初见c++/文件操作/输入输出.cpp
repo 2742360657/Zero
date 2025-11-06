@@ -1,4 +1,4 @@
-#include"ipch.h"
+﻿#include<iostream>
 
 int main()
 {
@@ -18,3 +18,4 @@ int main()
 	ofs.open("string.out.txt", std::ios::out);
 	ofs << s;
 }
+

@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 class zuobiao
 {
 	float x, y;
@@ -9,7 +9,7 @@ public:
 		x = 0.0f;
 		y = 0.0f;
 	}
-	~zuobiao()//¹¹Ôìº¯ÊýÇ°¼ÓÒ»¸ö~ÎªÎö¹¹º¯Êý£¬ÔÚÊµÀýÖÐÓÃÓÚÊÍ·ÅÄÚ´æ£¨Ìø³ö×÷ÓÃÓòÊ±Ò²»á×Ô¶¯µ÷ÓÃ£©
+	~zuobiao()//æž„é€ å‡½æ•°å‰åŠ ä¸€ä¸ª~ä¸ºæžæž„å‡½æ•°ï¼Œåœ¨å®žä¾‹ä¸­ç”¨äºŽé‡Šæ”¾å†…å­˜ï¼ˆè·³å‡ºä½œç”¨åŸŸæ—¶ä¹Ÿä¼šè‡ªåŠ¨è°ƒç”¨ï¼‰
 	{
 		std::cout << "destroyed zuobiao" << std::endl;
 	}
@@ -26,6 +26,7 @@ void jiechu()
 }
 int main()
 {
-	jiechu();//Ö´ÐÐÍêÕâ¸öº¯Êý£¬½øÐÐÏÂÒ»ÐÐ´úÂëÊÇ¾Ã»áµ÷ÓÃÎö¹¹º¯Êý
+	jiechu();//æ‰§è¡Œå®Œè¿™ä¸ªå‡½æ•°ï¼Œè¿›è¡Œä¸‹ä¸€è¡Œä»£ç æ˜¯ä¹…ä¼šè°ƒç”¨æžæž„å‡½æ•°
 	std::cin.get();
 }
+

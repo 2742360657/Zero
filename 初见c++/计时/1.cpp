@@ -1,14 +1,15 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 int main()
 {
-    using namespace std::literals::chrono_literals; // Ê¹ÓÃchrono_literalsÃüÃû¿Õ¼ä£¬·½±ãÊ¹ÓÃÊ±¼ä×ÖÃæÁ¿£¬Èç1s
+    using namespace std::literals::chrono_literals; // ä½¿ç”¨chrono_literalså‘½åç©ºé—´ï¼Œæ–¹ä¾¿ä½¿ç”¨æ—¶é—´å­—é¢é‡ï¼Œå¦‚1s
 
-    auto start = std::chrono::high_resolution_clock::now(); // »ñÈ¡µ±Ç°µÄ¸ß¾«¶ÈÊ±¼ä×÷Îª¿ªÊ¼Ê±¼ä
-    std::this_thread::sleep_for(1s); // ÈÃµ±Ç°Ïß³ÌĞİÃß1Ãë
-    auto end = std::chrono::high_resolution_clock::now(); // »ñÈ¡µ±Ç°µÄ¸ß¾«¶ÈÊ±¼ä×÷Îª½áÊøÊ±¼ä
+    auto start = std::chrono::high_resolution_clock::now(); // è·å–å½“å‰çš„é«˜ç²¾åº¦æ—¶é—´ä½œä¸ºå¼€å§‹æ—¶é—´
+    std::this_thread::sleep_for(1s); // è®©å½“å‰çº¿ç¨‹ä¼‘çœ 1ç§’
+    auto end = std::chrono::high_resolution_clock::now(); // è·å–å½“å‰çš„é«˜ç²¾åº¦æ—¶é—´ä½œä¸ºç»“æŸæ—¶é—´
 
-    std::chrono::duration<float> duration = end - start; // ¼ÆËãÊ±¼ä²î£¬½á¹ûÒÔÃëÎªµ¥Î»
-    std::cout << duration.count() << "s " << std::endl; // Êä³öÊ±¼ä²î£¬¼´ĞİÃßµÄÃëÊı
+    std::chrono::duration<float> duration = end - start; // è®¡ç®—æ—¶é—´å·®ï¼Œç»“æœä»¥ç§’ä¸ºå•ä½
+    std::cout << duration.count() << "s " << std::endl; // è¾“å‡ºæ—¶é—´å·®ï¼Œå³ä¼‘çœ çš„ç§’æ•°
 
 }
+

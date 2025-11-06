@@ -1,4 +1,4 @@
-#include<map>//¶ÔÓÚkeyÖµ½øĞĞ´¦Àí£¨Ä¬ÈÏ´ÓĞ¡µ½´óÅÅĞò£©£¬ÊµÖµ¿ÉÒÔÖØ¸´ÇÒ²»ÅÅĞò
+ï»¿#include<map>//å¯¹äºkeyå€¼è¿›è¡Œå¤„ç†ï¼ˆé»˜è®¤ä»å°åˆ°å¤§æ’åºï¼‰ï¼Œå®å€¼å¯ä»¥é‡å¤ä¸”ä¸æ’åº
 #include<iostream>
 
 void printMap(std::map<int, int>& m)
@@ -12,17 +12,17 @@ void printMap(std::map<int, int>& m)
 
 void test01()
 {
-	std::map<int, int>m; //Ä¬ÈÏ¹¹Ôì
-	m.insert(std::pair<int, int>(1, 10));//À¨ºÅÖĞ²»¿ÉÒÔÖ±½ÓĞ´Á½¸öÊı
+	std::map<int, int>m; //é»˜è®¤æ„é€ 
+	m.insert(std::pair<int, int>(1, 10));//æ‹¬å·ä¸­ä¸å¯ä»¥ç›´æ¥å†™ä¸¤ä¸ªæ•°
 	m.insert(std::pair<int, int>(2, 20));
 	m.insert(std::pair<int, int>(3, 30));
 	printMap(m);
 
-	std::map<int, int>m2(m); //¿½±´¹¹Ôì
+	std::map<int, int>m2(m); //æ‹·è´æ„é€ 
 	printMap(m2);
 
 	std::map<int, int>m3;
-	m3 = m2; //¸³Öµ
+	m3 = m2; //èµ‹å€¼
 	printMap(m3);
 }
 
@@ -30,3 +30,4 @@ int main()
 {
 	test01();
 }
+

@@ -1,4 +1,4 @@
-#include<vector>
+ï»¿#include<vector>
 #include<algorithm>
 #include<iostream>
 
@@ -28,8 +28,8 @@ void test01()
 	{
 		v.push_back(i);
 	}
-	std::vector<int>vTarget; //Ä¿±êÈİÆ÷
-	vTarget.resize(v.size()); // Ä¿±êÈİÆ÷ĞèÒªÌáÇ°¿ª±Ù¿Õ¼ä
+	std::vector<int>vTarget; //ç›®æ ‡å®¹å™¨
+	vTarget.resize(v.size()); // ç›®æ ‡å®¹å™¨éœ€è¦æå‰å¼€è¾Ÿç©ºé—´
 
 	transform(v.begin(), v.end(), vTarget.begin(), TransForm());
 	for_each(vTarget.begin(), vTarget.end(), MyPrint());
@@ -39,3 +39,4 @@ int main()
 {
 	test01();
 }
+

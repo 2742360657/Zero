@@ -1,4 +1,4 @@
-﻿#include"ipch.h"
+﻿#include<iostream>
 
 //empty();               //判断容器是否为空
 //capacity();            //容器的容量
@@ -37,3 +37,4 @@ int main()
 	test(c);
 	test(d);
 }
+

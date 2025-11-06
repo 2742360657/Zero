@@ -1,10 +1,10 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//* `vector<T > v; `               		  //²ÉÓÃÄ£°åÊµÏÖÀàÊµÏÖ£¬Ä¬ÈÏ¹¹Ôìº¯Êı
-//* `vector(v.begin(), v.end());   `      //½«v[begin(), end())Çø¼äÖĞµÄÔªËØ¿½±´¸ø±¾Éí¡£
-//* `vector(n, elem); `                   //¹¹Ôìº¯Êı½«n¸öelem¿½±´¸ø±¾Éí¡£
-//* `vector(const vector& vec); `         //¿½±´¹¹Ôìº¯Êı¡£
+//* `vector<T > v; `               		  //é‡‡ç”¨æ¨¡æ¿å®ç°ç±»å®ç°ï¼Œé»˜è®¤æ„é€ å‡½æ•°
+//* `vector(v.begin(), v.end());   `      //å°†v[begin(), end())åŒºé—´ä¸­çš„å…ƒç´ æ‹·è´ç»™æœ¬èº«ã€‚
+//* `vector(n, elem); `                   //æ„é€ å‡½æ•°å°†nä¸ªelemæ‹·è´ç»™æœ¬èº«ã€‚
+//* `vector(const vector& vec); `         //æ‹·è´æ„é€ å‡½æ•°ã€‚
 
 
 template <class T>
@@ -19,7 +19,7 @@ void printVector(vector<T>& v)
 
 void test01()
 {
-	vector<int> v1; //ÎŞ²Î¹¹Ôì
+	vector<int> v1; //æ— å‚æ„é€ 
 	for (int i = 0; i < 10; i++)
 	{
 		v1.push_back(i);
@@ -29,7 +29,7 @@ void test01()
 	vector<int> v2(v1.begin(), v1.end());
 	printVector(v2);
 
-	vector<string> v3(5, "ËÕÜç");
+	vector<string> v3(5, "è‹èŒœ");
 	printVector(v3);
 
 	vector<string> v4(v3);
@@ -44,3 +44,4 @@ int main() {
 
 	return 0;
 }
+

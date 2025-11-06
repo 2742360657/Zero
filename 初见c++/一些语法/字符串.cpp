@@ -1,60 +1,61 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 int main()
 {
-	const char* name = "ËÕÜç";
-	std::string name2 = "³ÎÉÁ";
+	const char* name = "è‹èŒœ";
+	std::string name2 = "æ¾„é—ª";
 	std::cout << name2 << "\n";
-	name2 += "¿É°®Äó";//¿ÉÒÔ²¹¼Ó×Ö·û£¨ÖØÔØ£©
+	name2 += "å¯çˆ±æ";//å¯ä»¥è¡¥åŠ å­—ç¬¦ï¼ˆé‡è½½ï¼‰
 	std::cout << name2 << "\n";
-	//²»ÄÜĞ´std::string name = "¿É°®µÄ" + "ËÕÜç";Ò²¾ÍÊÇ²»ÄÜ°ÑÁ½¸öÖ¸ÕëÏà¼Ó
-	name2 = "ËÕÜç¿É°®Äó";//Ó¦¸ÃÖ±½ÓÖØĞÂĞ´
+	//ä¸èƒ½å†™std::string name = "å¯çˆ±çš„" + "è‹èŒœ";ä¹Ÿå°±æ˜¯ä¸èƒ½æŠŠä¸¤ä¸ªæŒ‡é’ˆç›¸åŠ 
+	name2 = "è‹èŒœå¯çˆ±æ";//åº”è¯¥ç›´æ¥é‡æ–°å†™
 	std::cout << name2 << "\n";
-	std::string shuju = R"(R¿ÉÒÔºöÂÔ×ªÒå×Ö·û£¬Ò²¾ÍÊÇÏÖÔÚËùÓĞÀ¨ºÅÄÚµÄ¶«Î÷¶¼»áÖ±½ÓÊä³ö
-	//°üÀ¨»»ĞĞ£¬\0Ò²»áÊ§È¥×÷ÓÃ
-	)ºó½Ó"²Å»á½áÊø
+	std::string shuju = R"(Rå¯ä»¥å¿½ç•¥è½¬ä¹‰å­—ç¬¦ï¼Œä¹Ÿå°±æ˜¯ç°åœ¨æ‰€æœ‰æ‹¬å·å†…çš„ä¸œè¥¿éƒ½ä¼šç›´æ¥è¾“å‡º
+	//åŒ…æ‹¬æ¢è¡Œï¼Œ\0ä¹Ÿä¼šå¤±å»ä½œç”¨
+	)åæ¥"æ‰ä¼šç»“æŸ
 	)";
 	std::cout << shuju << "\n";
 }
-//ÔÚC++ÖĞ£¬std::string ÀàÌá¹©ÁËĞí¶àÓÃÓÚ²Ù×÷×Ö·û´®µÄ³ÉÔ±º¯Êı¡£ÒÔÏÂÊÇÒ»Ğ©³£ÓÃµÄ std::string ³ÉÔ±º¯Êı£º
-//¹¹Ôìº¯Êı£º
-//string()£ºÄ¬ÈÏ¹¹ÔìÒ»¸ö¿Õ×Ö·û´®¡£
-//string(const char* s)£º´ÓC·ç¸ñ×Ö·û´®¹¹Ôì¡£
-//string(const string& str)£º¸´ÖÆ¹¹Ôìº¯Êı¡£
-//string(size_t n, char c)£º¹¹ÔìÒ»¸öÓÉn¸ö×Ö·ûc×é³ÉµÄ×Ö·û´®¡£
-//¸³ÖµÓëÁ¬½Ó£º
-//operator=(const string& str)£º¸³ÖµÔËËã·û¡£
-//operator+=(const string& str)£ºÁ¬½Ó×Ö·û´®¡£
-//operator+=(char c)£ºÔÚ×Ö·û´®Ä©Î²Ìí¼ÓÒ»¸ö×Ö·û¡£
-//·ÃÎÊÔªËØ£º
-//operator[](size_t pos)£º·ÃÎÊÖ¸¶¨Î»ÖÃµÄ×Ö·û¡£
-//at(size_t pos)£º·ÃÎÊÖ¸¶¨Î»ÖÃµÄ×Ö·û£¬´ø±ß½ç¼ì²é¡£
-//ĞŞ¸Ä×Ö·û´®£º
-//append(const string& str)£ºÔÚ×Ö·û´®Ä©Î²×·¼ÓÁíÒ»¸ö×Ö·û´®¡£
-//append(size_t n, char c)£ºÔÚ×Ö·û´®Ä©Î²×·¼Ón¸ö×Ö·ûc¡£
-//erase(size_t pos = 0, size_t len = npos)£º´Ó×Ö·û´®ÖĞÉ¾³ı×Ö·û¡£
-//insert(size_t index, const string& str)£ºÔÚÖ¸¶¨Î»ÖÃ²åÈë×Ö·û´®¡£
-//replace(size_t pos, size_t len, const string& str)£ºÌæ»»×Ó×Ö·û´®¡£
-//clear()£ºÇå¿Õ×Ö·û´®¡£
-//±È½Ï£º
-//compare(const string& str)£º±È½Ï×Ö·û´®¡£
-//compare(size_t pos1, size_t len1, const string& str)£º±È½Ï×Ó×Ö·û´®¡£
-//compare(const char* s)£ºÓëC·ç¸ñ×Ö·û´®±È½Ï¡£
-//²éÕÒÓëÌæ»»£º
-//find(const string& str, size_t pos = 0)£º²éÕÒ×Ó×Ö·û´®¡£
-//find(char c, size_t pos = 0)£º²éÕÒ×Ö·û¡£
-//rfind(const string& str, size_t pos = npos)£º´ÓºóÏòÇ°²éÕÒ×Ó×Ö·û´®¡£
-//replace(size_t pos, size_t len, const string& str)£ºÌæ»»×Ó×Ö·û´®¡£
-//×Ó×Ö·û´®£º
-//substr(size_t pos = 0, size_t len = npos)£º»ñÈ¡×Ó×Ö·û´®¡£
-//´óĞ¡ÓëÈİÁ¿£º
-//size()£º»ñÈ¡×Ö·û´®³¤¶È¡£
-//length()£º»ñÈ¡×Ö·û´®³¤¶È£¨ÓësizeÏàÍ¬£©¡£
-//max_size()£º»ñÈ¡×î´ó¿ÉÄÜµÄ×Ö·û´®³¤¶È¡£
-//capacity()£º»ñÈ¡µ±Ç°·ÖÅäµÄ´æ´¢¿Õ¼ä¡£
-//ÆäËû£º
-//empty()£º¼ì²é×Ö·û´®ÊÇ·ñÎª¿Õ¡£
-//resize(size_t n, char c)£ºµ÷Õû×Ö·û´®´óĞ¡¡£
-//reserve(size_t res_arg)£ºÔ¤Áô´æ´¢¿Õ¼ä¡£
-//c_str()£º»ñÈ¡C·ç¸ñ×Ö·û´®¡£
-//data()£º»ñÈ¡×Ö·û´®Êı¾İ¡£
+//åœ¨C++ä¸­ï¼Œstd::string ç±»æä¾›äº†è®¸å¤šç”¨äºæ“ä½œå­—ç¬¦ä¸²çš„æˆå‘˜å‡½æ•°ã€‚ä»¥ä¸‹æ˜¯ä¸€äº›å¸¸ç”¨çš„ std::string æˆå‘˜å‡½æ•°ï¼š
+//æ„é€ å‡½æ•°ï¼š
+//string()ï¼šé»˜è®¤æ„é€ ä¸€ä¸ªç©ºå­—ç¬¦ä¸²ã€‚
+//string(const char* s)ï¼šä»Cé£æ ¼å­—ç¬¦ä¸²æ„é€ ã€‚
+//string(const string& str)ï¼šå¤åˆ¶æ„é€ å‡½æ•°ã€‚
+//string(size_t n, char c)ï¼šæ„é€ ä¸€ä¸ªç”±nä¸ªå­—ç¬¦cç»„æˆçš„å­—ç¬¦ä¸²ã€‚
+//èµ‹å€¼ä¸è¿æ¥ï¼š
+//operator=(const string& str)ï¼šèµ‹å€¼è¿ç®—ç¬¦ã€‚
+//operator+=(const string& str)ï¼šè¿æ¥å­—ç¬¦ä¸²ã€‚
+//operator+=(char c)ï¼šåœ¨å­—ç¬¦ä¸²æœ«å°¾æ·»åŠ ä¸€ä¸ªå­—ç¬¦ã€‚
+//è®¿é—®å…ƒç´ ï¼š
+//operator[](size_t pos)ï¼šè®¿é—®æŒ‡å®šä½ç½®çš„å­—ç¬¦ã€‚
+//at(size_t pos)ï¼šè®¿é—®æŒ‡å®šä½ç½®çš„å­—ç¬¦ï¼Œå¸¦è¾¹ç•Œæ£€æŸ¥ã€‚
+//ä¿®æ”¹å­—ç¬¦ä¸²ï¼š
+//append(const string& str)ï¼šåœ¨å­—ç¬¦ä¸²æœ«å°¾è¿½åŠ å¦ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚
+//append(size_t n, char c)ï¼šåœ¨å­—ç¬¦ä¸²æœ«å°¾è¿½åŠ nä¸ªå­—ç¬¦cã€‚
+//erase(size_t pos = 0, size_t len = npos)ï¼šä»å­—ç¬¦ä¸²ä¸­åˆ é™¤å­—ç¬¦ã€‚
+//insert(size_t index, const string& str)ï¼šåœ¨æŒ‡å®šä½ç½®æ’å…¥å­—ç¬¦ä¸²ã€‚
+//replace(size_t pos, size_t len, const string& str)ï¼šæ›¿æ¢å­å­—ç¬¦ä¸²ã€‚
+//clear()ï¼šæ¸…ç©ºå­—ç¬¦ä¸²ã€‚
+//æ¯”è¾ƒï¼š
+//compare(const string& str)ï¼šæ¯”è¾ƒå­—ç¬¦ä¸²ã€‚
+//compare(size_t pos1, size_t len1, const string& str)ï¼šæ¯”è¾ƒå­å­—ç¬¦ä¸²ã€‚
+//compare(const char* s)ï¼šä¸Cé£æ ¼å­—ç¬¦ä¸²æ¯”è¾ƒã€‚
+//æŸ¥æ‰¾ä¸æ›¿æ¢ï¼š
+//find(const string& str, size_t pos = 0)ï¼šæŸ¥æ‰¾å­å­—ç¬¦ä¸²ã€‚
+//find(char c, size_t pos = 0)ï¼šæŸ¥æ‰¾å­—ç¬¦ã€‚
+//rfind(const string& str, size_t pos = npos)ï¼šä»åå‘å‰æŸ¥æ‰¾å­å­—ç¬¦ä¸²ã€‚
+//replace(size_t pos, size_t len, const string& str)ï¼šæ›¿æ¢å­å­—ç¬¦ä¸²ã€‚
+//å­å­—ç¬¦ä¸²ï¼š
+//substr(size_t pos = 0, size_t len = npos)ï¼šè·å–å­å­—ç¬¦ä¸²ã€‚
+//å¤§å°ä¸å®¹é‡ï¼š
+//size()ï¼šè·å–å­—ç¬¦ä¸²é•¿åº¦ã€‚
+//length()ï¼šè·å–å­—ç¬¦ä¸²é•¿åº¦ï¼ˆä¸sizeç›¸åŒï¼‰ã€‚
+//max_size()ï¼šè·å–æœ€å¤§å¯èƒ½çš„å­—ç¬¦ä¸²é•¿åº¦ã€‚
+//capacity()ï¼šè·å–å½“å‰åˆ†é…çš„å­˜å‚¨ç©ºé—´ã€‚
+//å…¶ä»–ï¼š
+//empty()ï¼šæ£€æŸ¥å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©ºã€‚
+//resize(size_t n, char c)ï¼šè°ƒæ•´å­—ç¬¦ä¸²å¤§å°ã€‚
+//reserve(size_t res_arg)ï¼šé¢„ç•™å­˜å‚¨ç©ºé—´ã€‚
+//c_str()ï¼šè·å–Cé£æ ¼å­—ç¬¦ä¸²ã€‚
+//data()ï¼šè·å–å­—ç¬¦ä¸²æ•°æ®ã€‚
+

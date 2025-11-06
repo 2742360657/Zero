@@ -1,30 +1,30 @@
-#include <set>
+ï»¿#include <set>
 #include<iostream>
 
-//setºÍmultisetÇø±ğ
+//setå’ŒmultisetåŒºåˆ«
 void test01()
 {
 	std::set<int> s;
-	std::pair<std::set<int>::iterator, bool>  ret = s.insert(10);//setµÄinsert²Ù×÷»á·µ»ØÒ»¸öpair
-	//¶ÔÓÚpair£¬ÓĞÁ½¸öÔªËØ£¬´´½¨·½Ê½ÈçÏÂ
+	std::pair<std::set<int>::iterator, bool>  ret = s.insert(10);//setçš„insertæ“ä½œä¼šè¿”å›ä¸€ä¸ªpair
+	//å¯¹äºpairï¼Œæœ‰ä¸¤ä¸ªå…ƒç´ ï¼Œåˆ›å»ºæ–¹å¼å¦‚ä¸‹
 	//std::pair<std::string, int> p("Tom", 20);
 	//std::pair<std::string, int> p2 = std::make_pair("Jerry", 10);
-	if (ret.second) //·ÃÎÊpairÔªËØÊ±Ê¹ÓÃfirstÓësecond
+	if (ret.second) //è®¿é—®pairå…ƒç´ æ—¶ä½¿ç”¨firstä¸second
 	{
-		std::cout << "µÚÒ»´Î²åÈë³É¹¦!" << std::endl;
+		std::cout << "ç¬¬ä¸€æ¬¡æ’å…¥æˆåŠŸ!" << std::endl;
 	}
 	else 
 	{
-		std::cout << "µÚÒ»´Î²åÈëÊ§°Ü!" << std::endl;
+		std::cout << "ç¬¬ä¸€æ¬¡æ’å…¥å¤±è´¥!" << std::endl;
 	}
 	ret = s.insert(10);
 	if (ret.second) 
 	{
-		std::cout << "µÚ¶ş´Î²åÈë³É¹¦!" << std::endl;
+		std::cout << "ç¬¬äºŒæ¬¡æ’å…¥æˆåŠŸ!" << std::endl;
 	}
 	else 
 	{
-		std::cout << "µÚ¶ş´Î²åÈëÊ§°Ü!" << std::endl;
+		std::cout << "ç¬¬äºŒæ¬¡æ’å…¥å¤±è´¥!" << std::endl;
 	}
 
 	//multiset
@@ -42,3 +42,4 @@ int main()
 {
 	test01();
 }
+

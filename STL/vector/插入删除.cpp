@@ -1,12 +1,12 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
-//* `push_back(ele); `                                      //Î²²¿²åÈëÔªËØele
-//* `pop_back(); `                                          //É¾³ı×îºóÒ»¸öÔªËØ
-//* `insert(const_iterator pos, ele); `						//µü´úÆ÷Ö¸ÏòÎ»ÖÃpos²åÈëÔªËØele
-//* `insert(const_iterator pos, int count, ele);			//µü´úÆ÷Ö¸ÏòÎ»ÖÃpos²åÈëcount¸öÔªËØele
-//* `erase(const_iterator pos); `							//É¾³ıµü´úÆ÷Ö¸ÏòµÄÔªËØ
-//* `erase(const_iterator start, const_iterator end);		// É¾³ıµü´úÆ÷´Óstartµ½endÖ®¼äµÄÔªËØ
-//* `clear(); `                                             //É¾³ıÈİÆ÷ÖĞËùÓĞÔªËØ
+//* `push_back(ele); `                                      //å°¾éƒ¨æ’å…¥å…ƒç´ ele
+//* `pop_back(); `                                          //åˆ é™¤æœ€åä¸€ä¸ªå…ƒç´ 
+//* `insert(const_iterator pos, ele); `						//è¿­ä»£å™¨æŒ‡å‘ä½ç½®posæ’å…¥å…ƒç´ ele
+//* `insert(const_iterator pos, int count, ele);			//è¿­ä»£å™¨æŒ‡å‘ä½ç½®posæ’å…¥countä¸ªå…ƒç´ ele
+//* `erase(const_iterator pos); `							//åˆ é™¤è¿­ä»£å™¨æŒ‡å‘çš„å…ƒç´ 
+//* `erase(const_iterator start, const_iterator end);		// åˆ é™¤è¿­ä»£å™¨ä»startåˆ°endä¹‹é—´çš„å…ƒç´ 
+//* `clear(); `                                             //åˆ é™¤å®¹å™¨ä¸­æ‰€æœ‰å…ƒç´ 
 
 template<class T>
 void dy(const std::vector<T>& sl)
@@ -20,17 +20,18 @@ void dy(const std::vector<T>& sl)
 
 int main()
 {
-	std::vector<std::string> a(4, "ËÕÜç");
+	std::vector<std::string> a(4, "è‹èŒœ");
 	dy(a);
-	a.push_back("Ã«È×È×µÄÎ²°Í");
+	a.push_back("æ¯›èŒ¸èŒ¸çš„å°¾å·´");
 	dy(a);
-	a.insert(a.begin() + 4, 1, "¿É°®Äó");
+	a.insert(a.begin() + 4, 1, "å¯çˆ±æ");
 	dy(a);
 	a.erase(a.begin());
 	dy(a);
-	a.erase(a.begin(), a.begin() + 2);//ÕâÀïa.begin() + 2×÷Îªend£¬²»»á±»É¾³ı
+	a.erase(a.begin(), a.begin() + 2);//è¿™é‡Œa.begin() + 2ä½œä¸ºendï¼Œä¸ä¼šè¢«åˆ é™¤
 	dy(a);
 	a.pop_back();
 	dy(a);
 	a.clear();
 }
+

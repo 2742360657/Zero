@@ -1,6 +1,6 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
-//×Ô¶¨ÒåÊı¾İÀàĞÍ
+//è‡ªå®šä¹‰æ•°æ®ç±»å‹
 class Person {
 public:
 	Person(string name, int age) {
@@ -11,12 +11,12 @@ public:
 	string mName;
 	int mAge;
 };
-//´æ·Å¶ÔÏó
+//å­˜æ”¾å¯¹è±¡
 void test01() {
 
 	vector<Person> v;
 
-	//´´½¨Êı¾İ
+	//åˆ›å»ºæ•°æ®
 	Person p1("aaa", 10);
 	Person p2("bbb", 20);
 	Person p3("ccc", 30);
@@ -36,16 +36,16 @@ void test01() {
 }
 
 
-//·Å¶ÔÏóÖ¸Õë
+//æ”¾å¯¹è±¡æŒ‡é’ˆ
 void test02() {
 
 	vector<Person*> v;
-	//²»ÄÜÓÃvector<Person*> v£¨10£©;»áÖ±½Ó´´½¨10¸öÊµÀı£¨NULL£©£¬µ¼ÖÂºóĞøpush_backÊ±´Ó11¿ªÊ¼¼Ó
-	//µ«ÊÇ¿ÉÒÔÔÚºóÃæ¼ÓÉÏv.clear();ºóÊ¹ÓÃ£¨Ó¦¸ÃÊÇ»áÇå³ıNULL£©
-	v.reserve(10);//ÈİÆ÷Ô¤Áô10¸öÔªËØ³¤¶È£¬Ô¤ÁôÎ»ÖÃ²»³õÊ¼»¯£¬ÔªËØ²»¿É·ÃÎÊ¡£
+	//ä¸èƒ½ç”¨vector<Person*> vï¼ˆ10ï¼‰;ä¼šç›´æ¥åˆ›å»º10ä¸ªå®ä¾‹ï¼ˆNULLï¼‰ï¼Œå¯¼è‡´åç»­push_backæ—¶ä»11å¼€å§‹åŠ 
+	//ä½†æ˜¯å¯ä»¥åœ¨åé¢åŠ ä¸Šv.clear();åä½¿ç”¨ï¼ˆåº”è¯¥æ˜¯ä¼šæ¸…é™¤NULLï¼‰
+	v.reserve(10);//å®¹å™¨é¢„ç•™10ä¸ªå…ƒç´ é•¿åº¦ï¼Œé¢„ç•™ä½ç½®ä¸åˆå§‹åŒ–ï¼Œå…ƒç´ ä¸å¯è®¿é—®ã€‚
 	std::cout << v.size();
 
-	//´´½¨Êı¾İ
+	//åˆ›å»ºæ•°æ®
 	Person p1("aaa", 10);
 	Person p2("bbb", 20);
 	Person p3("ccc", 30);
@@ -78,3 +78,4 @@ int main() {
 
 	return 0;
 }
+

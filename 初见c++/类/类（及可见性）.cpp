@@ -1,13 +1,13 @@
-#include"ipch.h"
-class Log//structºÍclassÓÃ·¨ÏàÍ¬£¬µ«ÊÇclassÄ¬ÈÏË½ÓĞ£¬structÄ¬ÈÏ¹«ÓĞ
+ï»¿#include<iostream>
+class Log//structå’Œclassç”¨æ³•ç›¸åŒï¼Œä½†æ˜¯classé»˜è®¤ç§æœ‰ï¼Œstructé»˜è®¤å…¬æœ‰
 {
-public://ÊıÖµ
+public://æ•°å€¼
 	const int LogLevelError = 0;
 	const int LogLevelWarning = 1;
 	const int LogLevelTrace = 2;
 private:
-	int m_LogLevel = LogLevelTrace;//mÒ»°ã±íÊ¾Ë½ÓĞ
-public://·½·¨
+	int m_LogLevel = LogLevelTrace;//mä¸€èˆ¬è¡¨ç¤ºç§æœ‰
+public://æ–¹æ³•
 	void SetLevel(int Level)
 	{
 		m_LogLevel = Level;
@@ -30,10 +30,10 @@ public://·½·¨
 	}
 };
 /*
-º¯Êı¿É¼ûĞÔÔÚc++ÖĞ·ÖÎªÒÔÏÂÈıÖÖ
-public£ºÈ«¾Ö¿ÉÒÔ·ÃÎÊ
-protected£º¿ÉÒÔÔÚ¸ÃÀàµÄ×ÓÀàÖĞ·ÃÎÊ
-private£º½öÔÚÀàÖĞ¿ÉÒÔ·ÃÎÊ£¨Ò²¿ÉÒÔÔÚÓÑÔª£¬friendÖĞ·ÃÎÊ£©
+å‡½æ•°å¯è§æ€§åœ¨c++ä¸­åˆ†ä¸ºä»¥ä¸‹ä¸‰ç§
+publicï¼šå…¨å±€å¯ä»¥è®¿é—®
+protectedï¼šå¯ä»¥åœ¨è¯¥ç±»çš„å­ç±»ä¸­è®¿é—®
+privateï¼šä»…åœ¨ç±»ä¸­å¯ä»¥è®¿é—®ï¼ˆä¹Ÿå¯ä»¥åœ¨å‹å…ƒï¼Œfriendä¸­è®¿é—®ï¼‰
 */
 int main()
 {
@@ -44,3 +44,4 @@ int main()
 	log.Trace("Hello!");
 	std::cin.get();
 }
+

@@ -1,12 +1,12 @@
-#include <functional>
+ï»¿#include <functional>
 #include<iostream>
 
-//template<class T > T plus<T>				//¼Ó·¨·Âº¯Êı
-//template<class T > T minus<T>				//¼õ·¨·Âº¯Êı
-//template<class T > T multiplies<T>		//³Ë·¨·Âº¯Êı
-//template<class T > T divides<T>			//³ı·¨·Âº¯Êı
-//template<class T > T modulus<T>			//È¡Ä£·Âº¯Êı
-//template<class T > T negate<T>			//È¡·´·Âº¯Êı
+//template<class T > T plus<T>				//åŠ æ³•ä»¿å‡½æ•°
+//template<class T > T minus<T>				//å‡æ³•ä»¿å‡½æ•°
+//template<class T > T multiplies<T>		//ä¹˜æ³•ä»¿å‡½æ•°
+//template<class T > T divides<T>			//é™¤æ³•ä»¿å‡½æ•°
+//template<class T > T modulus<T>			//å–æ¨¡ä»¿å‡½æ•°
+//template<class T > T negate<T>			//å–åä»¿å‡½æ•°
 
 void test01()
 {
@@ -25,3 +25,4 @@ int main()
 	test01();
 	test02();
 }
+

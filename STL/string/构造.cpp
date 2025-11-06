@@ -1,29 +1,29 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//string¹¹Ôì
+//stringæ„é€ 
 void test01()
 {
-	string s1; //´´½¨¿Õ×Ö·û´®£¬µ÷ÓÃÎŞ²Î¹¹Ôìº¯Êı
+	string s1; //åˆ›å»ºç©ºå­—ç¬¦ä¸²ï¼Œè°ƒç”¨æ— å‚æ„é€ å‡½æ•°
 	cout << "str1 = " << s1 << endl;
 
 	const char* str = "hello world";
-	std::cout << str << "\n";//<< ÔËËã·ûµÄÖØÔØ°æ±¾Ê¶±ğ³ö str ÊÇÒ»¸öÖ¸Ïò³£Á¿×Ö·ûµÄÖ¸Õë£¬²¢´Ó¸ÃÖ¸Õë¿ªÊ¼Êä³ö×Ö·û£¬Ö±µ½Óöµ½×Ö·û´®Ä©Î²µÄ¿Õ×Ö·ûÎªÖ¹
-	string s2(str); //°Ñc_string×ª»»³ÉÁËstring
+	std::cout << str << "\n";//<< è¿ç®—ç¬¦çš„é‡è½½ç‰ˆæœ¬è¯†åˆ«å‡º str æ˜¯ä¸€ä¸ªæŒ‡å‘å¸¸é‡å­—ç¬¦çš„æŒ‡é’ˆï¼Œå¹¶ä»è¯¥æŒ‡é’ˆå¼€å§‹è¾“å‡ºå­—ç¬¦ï¼Œç›´åˆ°é‡åˆ°å­—ç¬¦ä¸²æœ«å°¾çš„ç©ºå­—ç¬¦ä¸ºæ­¢
+	string s2(str); //æŠŠc_stringè½¬æ¢æˆäº†string
 
 	cout << "str2 = " << s2 << endl;
 
-	string s3(s2); //µ÷ÓÃ¿½±´¹¹Ôìº¯Êı
+	string s3(s2); //è°ƒç”¨æ‹·è´æ„é€ å‡½æ•°
 	cout << "str3 = " << s3 << endl;
 
 	string s4(10, 'a');
 	cout << "str4 = " << s4 << endl;
 }
 /*
-string()					//´´½¨Ò»¸ö¿ÕµÄ×Ö·û´® ÀıÈç: string str;
-string(const char* s)		//Ê¹ÓÃ×Ö·û´®s³õÊ¼»¯
-string(const string& str)	//Ê¹ÓÃÒ»¸östring¶ÔÏó³õÊ¼»¯ÁíÒ»¸östring¶ÔÏó
-string(int n, char c)		//Ê¹ÓÃn¸ö×Ö·ûc³õÊ¼»¯ 
+string()					//åˆ›å»ºä¸€ä¸ªç©ºçš„å­—ç¬¦ä¸² ä¾‹å¦‚: string str;
+string(const char* s)		//ä½¿ç”¨å­—ç¬¦ä¸²såˆå§‹åŒ–
+string(const string& str)	//ä½¿ç”¨ä¸€ä¸ªstringå¯¹è±¡åˆå§‹åŒ–å¦ä¸€ä¸ªstringå¯¹è±¡
+string(int n, char c)		//ä½¿ç”¨nä¸ªå­—ç¬¦cåˆå§‹åŒ– 
 */
 
 int main() {
@@ -34,3 +34,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,11 +1,11 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 int main()
 {
 	std::list<int> a;
 	if (a.empty() == 1)
 	{
-		std::cout << "¿ÕµÄß÷\n";
+		std::cout << "ç©ºçš„å–µ\n";
 	}
 	a.push_back(9);
 	a.push_front(1);
@@ -15,3 +15,4 @@ int main()
 	a.resize(3, 0);
 	std::cout << a.size() << "\n";
 }
+

@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 struct Vector2
 {
     float x, y;
@@ -11,7 +11,7 @@ void dayin(Vector2 js)
 
 struct Vector4
 {
-    union//¹²ÓÃÍ¬Ò»´¦ÄÚ´æ£¬Ò²¾ÍÊÇËµaÏàµ±ÓÚÊÇVector2£¨x£¬y£©£¬bÍ¬Àí£¨¼´ÏàÍ¬Êı¾İ²ÉÓÃ²»Í¬½â¶Á·½·¨£©
+    union//å…±ç”¨åŒä¸€å¤„å†…å­˜ï¼Œä¹Ÿå°±æ˜¯è¯´aç›¸å½“äºæ˜¯Vector2ï¼ˆxï¼Œyï¼‰ï¼ŒbåŒç†ï¼ˆå³ç›¸åŒæ•°æ®é‡‡ç”¨ä¸åŒè§£è¯»æ–¹æ³•ï¼‰
     {
         struct
         {
@@ -27,6 +27,7 @@ struct Vector4
 int main()
 {
     Vector4 a = { 1,2,3,4 };
-    dayin(a.a);//±¾ÖÊÉÏÓĞµãÏñÀàĞÍË«¹Ø£¬¼´ÏÂĞĞ´úÂë
-    dayin(*(Vector2*)&a.x);//½«Ö¸ÏòxµÄÖ¸Õëµ±×÷vectorÖ¸ÕëÊ¹ÓÃ
+    dayin(a.a);//æœ¬è´¨ä¸Šæœ‰ç‚¹åƒç±»å‹åŒå…³ï¼Œå³ä¸‹è¡Œä»£ç 
+    dayin(*(Vector2*)&a.x);//å°†æŒ‡å‘xçš„æŒ‡é’ˆå½“ä½œvectoræŒ‡é’ˆä½¿ç”¨
 }
+

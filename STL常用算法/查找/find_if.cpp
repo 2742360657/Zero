@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 
 void test()
@@ -8,14 +8,14 @@ void test()
 	{
 		a.push_back(i);
 	}
-	std::vector<int>::iterator a1 = std::find_if(a.begin(), a.end(), [&](int x) {return x > 5; });//³¢ÊÔÁËÒ»ÏÂlambda
+	std::vector<int>::iterator a1 = std::find_if(a.begin(), a.end(), [&](int x) {return x > 5; });//å°è¯•äº†ä¸€ä¸‹lambda
 	if (a1 == a.end())
 	{
-		std::cout << "ÕÒ²»µ½ß÷\n";
+		std::cout << "æ‰¾ä¸åˆ°å–µ\n";
 	}
 	else
 	{
-		std::cout << "ÊÇ" << *a1 << "µÄËµ\n";
+		std::cout << "æ˜¯" << *a1 << "çš„è¯´\n";
 	}
 }
 
@@ -23,3 +23,4 @@ int main()
 {
 	test();
 }
+

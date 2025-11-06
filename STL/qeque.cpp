@@ -1,31 +1,31 @@
-#include"ipch.h"
-//���캯����
-//queue< T > que;             //queue����ģ����ʵ�֣�queue�����Ĭ�Ϲ�����ʽ
-//queue(const queue & que);   //�������캯��
+﻿#include<iostream>
+//构造函数：
+//queue< T > que;             //queue采用模板类实现，queue对象的默认构造形式
+//queue(const queue & que);   //拷贝构造函数
 
-//��ֵ������
-//queue& operator=(const queue & que);  //���صȺŲ�����
+//赋值操作：
+//queue& operator=(const queue & que);  //重载等号操作符
 
-//���ݴ�ȡ��
-//push(elem);						//����β����Ԫ��
-//pop();                            //�Ӷ�ͷ�Ƴ���һ��Ԫ��
-//back();                           //�������һ��Ԫ��
-//front();							//���ص�һ��Ԫ��
+//数据存取：
+//push(elem);						//往队尾添加元素
+//pop();                            //从队头移除第一个元素
+//back();                           //返回最后一个元素
+//front();							//返回第一个元素
 
-//��С������
-//empty();		//�ж϶�ջ�Ƿ�Ϊ��
-//size();		//����ջ�Ĵ�С
+//大小操作：
+//empty();		//判断堆栈是否为空
+//size();		//返回栈的大小
 
 int main()
 {
 	std::queue<std::string> a;
 	if (a.empty() == 1)
 	{
-		std::cout << "�յ�˵\n";
+		std::cout << "空的说\n";
 	}
-	a.push("С��");
-	a.push("�б�");
-	a.push("��");
+	a.push("小杯");
+	a.push("中杯");
+	a.push("大杯");
 	std::cout << "size:" << a.size() << "\n";
 	std::cout << "front:" << a.front() << "\n";
 	std::cout << "back:" << a.back() << "\n";
@@ -35,3 +35,4 @@ int main()
 	std::cout << "front:" << a.front() << "\n";
 	std::cout << "back:" << a.back() << "\n";
 }
+

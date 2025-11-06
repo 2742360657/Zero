@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<algorithm>
 
@@ -16,10 +16,10 @@ void test01()
 	std::vector<int>::iterator it = adjacent_find(v.begin(), v.end());
 	if (it == v.end()) 
 	{
-		std::cout << "ÕÒ²»µ½!" << std::endl;
+		std::cout << "æ‰¾ä¸åˆ°!" << std::endl;
 	}
 	else {
-		std::cout << "ÕÒµ½ÏàÁÚÖØ¸´ÔªËØÎª:" << *it << std::endl;
+		std::cout << "æ‰¾åˆ°ç›¸é‚»é‡å¤å…ƒç´ ä¸º:" << *it << std::endl;
 	}
 }
 
@@ -27,3 +27,4 @@ int main()
 {
 	test01();
 }
+

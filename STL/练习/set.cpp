@@ -1,4 +1,4 @@
-#include <set>
+ï»¿#include <set>
 #include<iostream>
 
 struct player
@@ -21,7 +21,7 @@ private:
 class MyCompare01
 {
 public:
-	bool operator()(int v1, int v2)const//ÕâÀï±È½Ïº¯Êı±ØĞëÊÇconstº¯Êı
+	bool operator()(int v1, int v2)const//è¿™é‡Œæ¯”è¾ƒå‡½æ•°å¿…é¡»æ˜¯constå‡½æ•°
 	{
 		return v1 > v2;
 	}
@@ -33,7 +33,7 @@ public:
 	bool operator()(const player& a,const player& b)const
 	{
 		return (a.m_lv > b.m_lv) || (a.m_lv == b.m_lv && a.m_name < b.m_name);
-		//Èç¹ûĞ´³Éreturn a.m_lv > b.m_lv;»áµ¼ÖÂÍ¬Ò»ĞÇ¼¶Ö»³öÏÖÒ»¸ö¸ÉÔ±
+		//å¦‚æœå†™æˆreturn a.m_lv > b.m_lv;ä¼šå¯¼è‡´åŒä¸€æ˜Ÿçº§åªå‡ºç°ä¸€ä¸ªå¹²å‘˜
 	}
 };
 
@@ -46,14 +46,14 @@ void test01()
 	s1.insert(30);
 	s1.insert(50);
 
-	//Ä¬ÈÏ´ÓĞ¡µ½´ó
+	//é»˜è®¤ä»å°åˆ°å¤§
 	for (std::set<int>::iterator it = s1.begin(); it != s1.end(); it++)
 	{
 		std::cout << *it << " ";
 	}
 	std::cout << std::endl;
 
-	//Ö¸¶¨ÅÅĞò¹æÔò
+	//æŒ‡å®šæ’åºè§„åˆ™
 	std::set<int, MyCompare01> s2;
 	s2.insert(10);
 	s2.insert(40);
@@ -71,16 +71,16 @@ void test01()
 void test02()
 {
 	std::set<player,MyCompare02> group1;
-	group1.insert(player(6, "³ÎÉÁ"));
-	group1.insert(player(5, "ÓğÃ«±Ê"));
-	group1.insert(player(6, "°²½àÀòÄÈ"));
-	group1.insert(player(6, "°¬ÑÅ·¨À­"));
-	group1.insert(player(4, "ÌÒ½ğÄï"));
-	group1.insert(player(2, "¶ÅÁÖ"));
-	group1.insert(player(3, "°ßµã"));
-	group1.insert(player(6, "ÄÜÌìÊ¹"));
-	group1.insert(player(4, "°²±È¶û"));
-	group1.insert(player(5, "ĞÓÈÊ"));
+	group1.insert(player(6, "æ¾„é—ª"));
+	group1.insert(player(5, "ç¾½æ¯›ç¬”"));
+	group1.insert(player(6, "å®‰æ´è‰å¨œ"));
+	group1.insert(player(6, "è‰¾é›…æ³•æ‹‰"));
+	group1.insert(player(4, "æ¡ƒé‡‘å¨˜"));
+	group1.insert(player(2, "æœæ—"));
+	group1.insert(player(3, "æ–‘ç‚¹"));
+	group1.insert(player(6, "èƒ½å¤©ä½¿"));
+	group1.insert(player(4, "å®‰æ¯”å°”"));
+	group1.insert(player(5, "æä»"));
 	for (player it:group1)
 	{
 		it.showplayer();
@@ -93,3 +93,4 @@ int main()
 	test01();
 	test02();
 }
+

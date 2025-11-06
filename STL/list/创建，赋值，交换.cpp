@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 template<class T>
 void printList(std::list <T>a)
@@ -22,7 +22,7 @@ void test02()
 	std::list<int>L2;
 	L2.assign(10, 100);
 
-	std::cout << "½»»»Ç°£º " << std::endl;
+	std::cout << "äº¤æ¢å‰ï¼š " << std::endl;
 	printList(L1);
 	printList(L2);
 
@@ -30,7 +30,7 @@ void test02()
 
 	L1.swap(L2);
 
-	std::cout << "½»»»ºó£º " << std::endl;
+	std::cout << "äº¤æ¢åŽï¼š " << std::endl;
 	printList(L1);
 	printList(L2);
 
@@ -44,3 +44,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,10 +1,10 @@
-#include <map>
+ï»¿#include <map>
 #include<iostream>
 
 class MyCompare 
 {
 public:
-	bool operator()(int v1, int v2)const //ÅÅĞò·½·¨¼ÇµÃconst
+	bool operator()(int v1, int v2)const //æ’åºæ–¹æ³•è®°å¾—const
 	{
 		return v1 > v2;
 	}
@@ -12,8 +12,8 @@ public:
 
 void test01()
 {
-	//Ä¬ÈÏ´ÓĞ¡µ½´óÅÅĞò
-	//ÀûÓÃ·Âº¯ÊıÊµÏÖ´Ó´óµ½Ğ¡ÅÅĞò
+	//é»˜è®¤ä»å°åˆ°å¤§æ’åº
+	//åˆ©ç”¨ä»¿å‡½æ•°å®ç°ä»å¤§åˆ°å°æ’åº
 	std::map<int, int, MyCompare> m;
 
 	m.insert(std::make_pair(1, 10));
@@ -31,3 +31,4 @@ int main()
 {
 	test01();
 }
+

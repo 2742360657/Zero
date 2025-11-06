@@ -1,20 +1,20 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//* `string& operator+=(const char* str); `                  //ÖØÔØ+=²Ù×÷·û
-//* `string& operator+=(const char c); `                     //ÖØÔØ+=²Ù×÷·û
-//* `string& operator+=(const string& str); `                //ÖØÔØ+=²Ù×÷·û
-//* `string& append(const char* s); `                        //°Ñ×Ö·û´®sÁ¬½Óµ½µ±Ç°×Ö·û´®½áÎ²
-//* `string& append(const char* s, int n); `                 //°Ñ×Ö·û´®sµÄÇ°n¸ö×Ö·ûÁ¬½Óµ½µ±Ç°×Ö·û´®½áÎ²
-//* `string& append(const string& s); `                      //Í¬operator+=(const string& str)
-//* `string& append(const string& s, int pos, int n);`		 //×Ö·û´®sÖĞ´Ópos¿ªÊ¼µÄn¸ö×Ö·ûÁ¬½Óµ½×Ö·û´®½áÎ²
+//* `string& operator+=(const char* str); `                  //é‡è½½+=æ“ä½œç¬¦
+//* `string& operator+=(const char c); `                     //é‡è½½+=æ“ä½œç¬¦
+//* `string& operator+=(const string& str); `                //é‡è½½+=æ“ä½œç¬¦
+//* `string& append(const char* s); `                        //æŠŠå­—ç¬¦ä¸²sè¿æ¥åˆ°å½“å‰å­—ç¬¦ä¸²ç»“å°¾
+//* `string& append(const char* s, int n); `                 //æŠŠå­—ç¬¦ä¸²sçš„å‰nä¸ªå­—ç¬¦è¿æ¥åˆ°å½“å‰å­—ç¬¦ä¸²ç»“å°¾
+//* `string& append(const string& s); `                      //åŒoperator+=(const string& str)
+//* `string& append(const string& s, int pos, int n);`		 //å­—ç¬¦ä¸²sä¸­ä»poså¼€å§‹çš„nä¸ªå­—ç¬¦è¿æ¥åˆ°å­—ç¬¦ä¸²ç»“å°¾
 
-//×Ö·û´®Æ´½Ó
+//å­—ç¬¦ä¸²æ‹¼æ¥
 void test01()
 {
-	string str1 = "ÎÒ";
+	string str1 = "æˆ‘";
 
-	str1 += "°®ÍæÓÎÏ·";
+	str1 += "çˆ±ç©æ¸¸æˆ";
 
 	cout << "str1 = " << str1 << endl;
 
@@ -32,7 +32,7 @@ void test01()
 	str3.append(" love ");
 	str3.append("game abcde", 5);
 	//str3.append(str2);
-	str3.append(str2, 4, 3); // ´ÓÏÂ±ê4Î»ÖÃ¿ªÊ¼ £¬½ØÈ¡3¸ö×Ö·û£¨³¬³öµÄ»°²»»á¼Ó¶«Î÷£©£¬Æ´½Óµ½×Ö·û´®Ä©Î²
+	str3.append(str2, 4, 3); // ä»ä¸‹æ ‡4ä½ç½®å¼€å§‹ ï¼Œæˆªå–3ä¸ªå­—ç¬¦ï¼ˆè¶…å‡ºçš„è¯ä¸ä¼šåŠ ä¸œè¥¿ï¼‰ï¼Œæ‹¼æ¥åˆ°å­—ç¬¦ä¸²æœ«å°¾
 	cout << "str3 = " << str3 << endl;
 }
 int main() {
@@ -41,3 +41,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 class MyInteger {
 
@@ -8,18 +8,18 @@ public:
 	MyInteger() {
 		m_Num = 0;
 	}
-	//Ç°ÖÃ++
+	//å‰ç½®++
 	MyInteger& operator++() {
-		//ÏÈ++
+		//å…ˆ++
 		m_Num++;
-		//ÔÙ·µ»Ø
+		//å†è¿”å›
 		return *this;
 	}
 
-	//ºóÖÃ++
+	//åç½®++
 	MyInteger operator++(int) {
-		//ÏÈ·µ»Ø
-		MyInteger temp = *this; //¼ÇÂ¼µ±Ç°±¾ÉíµÄÖµ£¬È»ºóÈÃ±¾ÉíµÄÖµ¼Ó1£¬µ«ÊÇ·µ»ØµÄÊÇÒÔÇ°µÄÖµ£¬´ïµ½ÏÈ·µ»Øºó++£»
+		//å…ˆè¿”å›
+		MyInteger temp = *this; //è®°å½•å½“å‰æœ¬èº«çš„å€¼ï¼Œç„¶åè®©æœ¬èº«çš„å€¼åŠ 1ï¼Œä½†æ˜¯è¿”å›çš„æ˜¯ä»¥å‰çš„å€¼ï¼Œè¾¾åˆ°å…ˆè¿”å›å++ï¼›
 		m_Num++;
 		return temp;
 	}
@@ -35,14 +35,14 @@ std::ostream& operator<<(std::ostream& out, MyInteger myint) {
 }
 
 
-//Ç°ÖÃ++ ÏÈ++ ÔÙ·µ»Ø
+//å‰ç½®++ å…ˆ++ å†è¿”å›
 void test01() {
 	MyInteger myInt;
 	std::cout << ++myInt << std::endl;
 	std::cout << myInt << std::endl;
 }
 
-//ºóÖÃ++ ÏÈ·µ»Ø ÔÙ++
+//åç½®++ å…ˆè¿”å› å†++
 void test02() {
 
 	MyInteger myInt;
@@ -59,3 +59,4 @@ int main() {
 
 	return 0;
 }
+

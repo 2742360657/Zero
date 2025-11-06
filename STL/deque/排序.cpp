@@ -1,20 +1,21 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
-//sort(iterator beg, iterator end)    ¶ÔbegºÍendÇø¼äÄÚÔªËØ½øĞĞÅÅĞò
+//sort(iterator beg, iterator end)    å¯¹begå’ŒendåŒºé—´å†…å…ƒç´ è¿›è¡Œæ’åº
 
 int main()
 {
-	std::deque<int> ¿É°®;
-	¿É°®.assign({ 1,0,4,8,5,9,6 });
-	std::deque<int>::iterator kbegin = ¿É°®.begin();
-	std::deque<int>::iterator kend = ¿É°®.end();
-	for (int& abc : ¿É°®)
+	std::deque<int> å¯çˆ±;
+	å¯çˆ±.assign({ 1,0,4,8,5,9,6 });
+	std::deque<int>::iterator kbegin = å¯çˆ±.begin();
+	std::deque<int>::iterator kend = å¯çˆ±.end();
+	for (int& abc : å¯çˆ±)
 	{
 		std::cout << abc << " ";
 	}
-	sort(kbegin, kend);//ËùÒÔ±ğÓÃconst
-	for (int& abc : ¿É°®)
+	sort(kbegin, kend);//æ‰€ä»¥åˆ«ç”¨const
+	for (int& abc : å¯çˆ±)
 	{
 		std::cout << abc << " ";
 	}
 }
+

@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <map>
 
-//insert(elem)          //ÔÚÈİÆ÷ÖĞ²åÈëÔªËØ¡£
-//clear()               //Çå³ıËùÓĞÔªËØ
-//erase(pos)            //É¾³ıposµü´úÆ÷ËùÖ¸µÄÔªËØ£¬·µ»ØÏÂÒ»¸öÔªËØµÄµü´úÆ÷¡£
-//erase(beg, end)       //É¾³ıÇø¼ä[beg,end)µÄËùÓĞÔªËØ £¬·µ»ØÏÂÒ»¸öÔªËØµÄµü´úÆ÷¡£
-//erase(key)            //É¾³ıÈİÆ÷ÖĞÖµÎªkeyµÄÔªËØ¡£
+//insert(elem)          //åœ¨å®¹å™¨ä¸­æ’å…¥å…ƒç´ ã€‚
+//clear()               //æ¸…é™¤æ‰€æœ‰å…ƒç´ 
+//erase(pos)            //åˆ é™¤posè¿­ä»£å™¨æ‰€æŒ‡çš„å…ƒç´ ï¼Œè¿”å›ä¸‹ä¸€ä¸ªå…ƒç´ çš„è¿­ä»£å™¨ã€‚
+//erase(beg, end)       //åˆ é™¤åŒºé—´[beg,end)çš„æ‰€æœ‰å…ƒç´  ï¼Œè¿”å›ä¸‹ä¸€ä¸ªå…ƒç´ çš„è¿­ä»£å™¨ã€‚
+//erase(key)            //åˆ é™¤å®¹å™¨ä¸­å€¼ä¸ºkeyçš„å…ƒç´ ã€‚
 
 void printMap(std::map<int, int>& m)
 {
@@ -18,26 +18,26 @@ void printMap(std::map<int, int>& m)
 
 void test01()
 {
-    // ²åÈë
+    // æ’å…¥
     std::map<int, int> m;
-    // µÚÒ»ÖÖ²åÈë·½Ê½
+    // ç¬¬ä¸€ç§æ’å…¥æ–¹å¼
     m.insert(std::pair<int, int>(1, 10));
-    // µÚ¶şÖÖ²åÈë·½Ê½
+    // ç¬¬äºŒç§æ’å…¥æ–¹å¼
     m.insert(std::make_pair(2, 20));
-    // µÚÈıÖÖ²åÈë·½Ê½
+    // ç¬¬ä¸‰ç§æ’å…¥æ–¹å¼
     m.insert(std::map<int, int>::value_type(3, 30));
-    // µÚËÄÖÖ²åÈë·½Ê½
+    // ç¬¬å››ç§æ’å…¥æ–¹å¼
     m[4] = 40;
     printMap(m);
 
-    // É¾³ı
+    // åˆ é™¤
     m.erase(m.begin());
     printMap(m);
 
     m.erase(3);
     printMap(m);
 
-    // Çå¿Õ
+    // æ¸…ç©º
     m.erase(m.begin(), m.end());
     m.clear();
     printMap(m);
@@ -47,3 +47,4 @@ int main()
 {
     test01();
 }
+

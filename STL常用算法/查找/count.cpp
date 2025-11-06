@@ -1,7 +1,7 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<set>
 
-//Èç¹ûÓĞ±È½ÏµÄ»°Òª¶¨Òå==
+//å¦‚æœæœ‰æ¯”è¾ƒçš„è¯è¦å®šä¹‰==
 
 void test()
 {
@@ -25,3 +25,4 @@ int main()
 {
 	test();
 }
+

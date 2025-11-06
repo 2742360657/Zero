@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 void ForEach(const std::vector<int>& values, const std::function<void(int)> &func)
 {
     for (int value : values)
@@ -8,16 +8,17 @@ void ForEach(const std::vector<int>& values, const std::function<void(int)> &fun
 int main()
 {
     std::vector<int> values = { 1, 5, 4, 2, 3 };
-    std::string a = "ÖµÊÇ£º";
+    std::string a = "å€¼æ˜¯ï¼š";
 
     auto lambda = [=](int value) mutable { a = "value is:"; std::cout << a << value << std::endl; };
-    //[](int) {º¯ÊıÖ÷Ìå}    ±íÊ¾Ò»¸ö½öÔÚ´Ë´¦Ê¹ÓÃµÄ´úÂë£¬[]±íÊ¾²¶»ñ,ºóĞøº¯ÊıÖĞÖ»ÄÜÊ¹ÓÃ²¶»ñµÄ±äÁ¿\
-    []ÖĞ¼Ó = ±íÊ¾¿ÉÒÔÍ¨¹ıÖµ´«µİ¿ÉÓÃ±äÁ¿£¬¼Ó & ±íÊ¾ÓÃÒıÓÃ´«µİ\
-    Ò²¿ÉÒÔÖ±½Ó¼Ó±äÁ¿Ãû³Æ£¨a»ò & a£©£¬½ö²¶»ñĞèÒªµÄ±äÁ¿\
-    ´Ë´¦ÓÃÖµ´«µİµÄÊ±ºòĞèÒª¼ÓÉÏmutable²Å¿ÉÒÔ¶Ô´«µİÖµµÄ¸±±¾½øĞĞ¸ü¸Ä£¨²»¸Ä±äÔ­ÏÈ±äÁ¿£©
+    //[](int) {å‡½æ•°ä¸»ä½“}    è¡¨ç¤ºä¸€ä¸ªä»…åœ¨æ­¤å¤„ä½¿ç”¨çš„ä»£ç ï¼Œ[]è¡¨ç¤ºæ•è·,åç»­å‡½æ•°ä¸­åªèƒ½ä½¿ç”¨æ•è·çš„å˜é‡\
+    []ä¸­åŠ  = è¡¨ç¤ºå¯ä»¥é€šè¿‡å€¼ä¼ é€’å¯ç”¨å˜é‡ï¼ŒåŠ  & è¡¨ç¤ºç”¨å¼•ç”¨ä¼ é€’\
+    ä¹Ÿå¯ä»¥ç›´æ¥åŠ å˜é‡åç§°ï¼ˆaæˆ– & aï¼‰ï¼Œä»…æ•è·éœ€è¦çš„å˜é‡\
+    æ­¤å¤„ç”¨å€¼ä¼ é€’çš„æ—¶å€™éœ€è¦åŠ ä¸Šmutableæ‰å¯ä»¥å¯¹ä¼ é€’å€¼çš„å‰¯æœ¬è¿›è¡Œæ›´æ”¹ï¼ˆä¸æ”¹å˜åŸå…ˆå˜é‡ï¼‰
     ForEach(values, lambda);
-    std::cout << a;//a²»¸Ä±ä
+    std::cout << a;//aä¸æ”¹å˜
 
-    auto it = std::find_if(values.begin(), values.end(), [](int value) { return value > 3; });//´úÂëÊµ¼ÊÓ¦ÓÃ³¡¾°
+    auto it = std::find_if(values.begin(), values.end(), [](int value) { return value > 3; });//ä»£ç å®é™…åº”ç”¨åœºæ™¯
     std::cout << *it << std::endl;
 }
+

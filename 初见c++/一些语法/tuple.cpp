@@ -1,8 +1,9 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 int main()
 {
-	std::tuple<int, float,int> ss = { 2,2.1f,3 };//¿ÉÒÔ´¢´æ¶à¸ö²»Í¬ÀàĞÍ±äÁ¿
-	int a = std::get<0>(ss);//¶ÁÈ¡ÖµÊ±ÓÃÕâÖÖĞÎÊ½
+	std::tuple<int, float,int> ss = { 2,2.1f,3 };//å¯ä»¥å‚¨å­˜å¤šä¸ªä¸åŒç±»å‹å˜é‡
+	int a = std::get<0>(ss);//è¯»å–å€¼æ—¶ç”¨è¿™ç§å½¢å¼
 	float b = std::get<1>(ss);
 	std::cout << std::get<0>(ss) << " and " << b << std::endl;
 }
+

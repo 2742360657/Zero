@@ -1,22 +1,23 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 int main()
 {
 	std::list<int> a = { 1,2,3,4 };
-	a.push_back(5);//Ä©Î²²åÈë
-	a.push_front(0);//Í·²¿²åÈë(²åÈëºófrontºÍback»áÒÆ¶¯£©
-	std::cout << a.front() << "," << a.back() << "\n";//·Ö±ğÎªµÚÒ»¸öºÍ×îºóÒ»¸öÔªËØ£¨c++ÊÇË«ÏòÁ´±í£©
+	a.push_back(5);//æœ«å°¾æ’å…¥
+	a.push_front(0);//å¤´éƒ¨æ’å…¥(æ’å…¥åfrontå’Œbackä¼šç§»åŠ¨ï¼‰
+	std::cout << a.front() << "," << a.back() << "\n";//åˆ†åˆ«ä¸ºç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªå…ƒç´ ï¼ˆc++æ˜¯åŒå‘é“¾è¡¨ï¼‰
 
-	a.pop_back();//Ä©Î²É¾³ı£¨backÇ°ÒÆ£©
-	a.pop_front();//Í·²¿É¾³ı£¨frontºóÒÆ£©
-	std::list<int>::iterator mc = a.end ();//Á´±íµü´úÆ÷,end»áÖ¸Ïò×îºóÒ»Î»µÄÏÂÒ»Î»£¬frontÖ¸Ïò×îºóÒ»Î»,¼´std::cout << *a.end();»á±¨´í
+	a.pop_back();//æœ«å°¾åˆ é™¤ï¼ˆbackå‰ç§»ï¼‰
+	a.pop_front();//å¤´éƒ¨åˆ é™¤ï¼ˆfrontåç§»ï¼‰
+	std::list<int>::iterator mc = a.end ();//é“¾è¡¨è¿­ä»£å™¨,endä¼šæŒ‡å‘æœ€åä¸€ä½çš„ä¸‹ä¸€ä½ï¼ŒfrontæŒ‡å‘æœ€åä¸€ä½,å³std::cout << *a.end();ä¼šæŠ¥é”™
 	std::cout << *(--mc) << "," << *(--mc) << "\n";
 	
 
 	std::vector<int> b = { 9,8,7,6 };
-	std::cout << b[0] << "\n";//Ö§³ÖËæ»ú·ÃÎÊ
+	std::cout << b[0] << "\n";//æ”¯æŒéšæœºè®¿é—®
 	b.push_back(5);
 	std::cout << b[4] << "\n";
 
 
 }
+

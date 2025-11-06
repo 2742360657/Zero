@@ -1,4 +1,4 @@
-#include"ipch.h"
+﻿#include<iostream>
 
 class Log
 {
@@ -9,7 +9,7 @@ public:
 	};
 
 private:
-	Level m_LogLevel = LevelTrace;//mһ���ʾ˽��
+	Level m_LogLevel = LevelTrace;//m一般表示私有
 
 public:
 	void SetLevel(Level message)
@@ -43,3 +43,4 @@ int main()
 	log.Trace("Hello! 2");
 	std::cin.get();
 }
+

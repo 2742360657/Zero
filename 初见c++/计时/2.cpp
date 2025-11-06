@@ -1,21 +1,21 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 struct Timer
 {
-    std::chrono::time_point<std::chrono::steady_clock> start, end; // ¶¨Òå¿ªÊ¼ºÍ½áÊøÊ±¼äµã
-    std::chrono::duration<float> duration; // ¶¨Òå³ÖĞøÊ±¼ä£¬ÒÔ¸¡µãÊıÃëÎªµ¥Î»
+    std::chrono::time_point<std::chrono::steady_clock> start, end; // å®šä¹‰å¼€å§‹å’Œç»“æŸæ—¶é—´ç‚¹
+    std::chrono::duration<float> duration; // å®šä¹‰æŒç»­æ—¶é—´ï¼Œä»¥æµ®ç‚¹æ•°ç§’ä¸ºå•ä½
 
-    Timer() // ¹¹Ôìº¯Êı
+    Timer() // æ„é€ å‡½æ•°
     {
-        start = std::chrono::high_resolution_clock::now(); // ³õÊ¼»¯¿ªÊ¼Ê±¼äÎªµ±Ç°µÄ¸ß¾«¶ÈÊ±¼ä
+        start = std::chrono::high_resolution_clock::now(); // åˆå§‹åŒ–å¼€å§‹æ—¶é—´ä¸ºå½“å‰çš„é«˜ç²¾åº¦æ—¶é—´
     }
 
-    ~Timer() // Îö¹¹º¯Êı
+    ~Timer() // ææ„å‡½æ•°
     {
-        end = std::chrono::high_resolution_clock::now(); // Îö¹¹Ê±¼ÇÂ¼½áÊøÊ±¼äÎªµ±Ç°µÄ¸ß¾«¶ÈÊ±¼ä
-        duration = end - start; // ¼ÆËã³ÖĞøÊ±¼ä£¬¼´½áÊøÊ±¼ä¼õÈ¥¿ªÊ¼Ê±¼ä
+        end = std::chrono::high_resolution_clock::now(); // ææ„æ—¶è®°å½•ç»“æŸæ—¶é—´ä¸ºå½“å‰çš„é«˜ç²¾åº¦æ—¶é—´
+        duration = end - start; // è®¡ç®—æŒç»­æ—¶é—´ï¼Œå³ç»“æŸæ—¶é—´å‡å»å¼€å§‹æ—¶é—´
         float ms = duration.count() * 1000.0f;
-        std::cout << "ºÄÊ±£º" << ms << std::endl;
+        std::cout << "è€—æ—¶ï¼š" << ms << std::endl;
     }
 };
 
@@ -24,6 +24,7 @@ int main()
     Timer js;
     for (int i = 0; i < 200; i++)
     {
-        std::cout << "¿É°®µÄËÕÜç\n";
+        std::cout << "å¯çˆ±çš„è‹èŒœ\n";
     }
 }
+

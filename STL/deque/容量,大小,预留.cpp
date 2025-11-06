@@ -1,4 +1,4 @@
-﻿#include"ipch.h"
+﻿#include<iostream>
 
 //deque.empty()              判断容器是否为空
 //deque.size()               返回容器中元素的个数
@@ -37,3 +37,4 @@ int main()
 	test(b);
 	test(c);
 }
+

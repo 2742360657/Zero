@@ -1,12 +1,13 @@
-#include#include"ipch.h"
+﻿#include#include<iostream>
 
-enum zheng :int//������Բ��ӡ���int�����򲻻�̶�����(����ֻ��ʹ���������ͣ�
+enum zheng :int//后面可以不加“：int”，则不会固定类型(这里只能使用整型类型）
 {
-	a = 8, b = 1, c = 2//��������и�ֵ�����Զ���0��ʼ��ֵ����Ȼ����,ö�ٳ�ԱΪ��̬
+	a = 8, b = 1, c = 2//如果不进行赋值，会自动从0开始赋值（自然数）,枚举成员为静态
 };
-//ö��������ʵ�������¶�����һ���������ͣ�ʹ�������͵�ֵֻ������ö�ٵ�ֵ�е�һ��
+//枚举在这里实际上是新定义了一种数据类型，使这种类型的值只能属于枚举的值中的一个
 
 int main()
 {
-	zheng wa = a;//�˴�zheng����ֱ�������������ͣ�������ֵֻ����a/b/c
+	zheng wa = a;//此处zheng可以直接用作数据类型，创建的值只能是a/b/c
 }
+

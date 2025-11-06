@@ -1,14 +1,14 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 static bool s_Finished = false;
 
 void DoWork()
 {
-	using namespace std::literals::chrono_literals;//ÉèÖÃ1s¼ä¸ôÓÃµÄ
+	using namespace std::literals::chrono_literals;//è®¾ç½®1sé—´éš”ç”¨çš„
 
-	while (!s_Finished)//×Ô¼ì
+	while (!s_Finished)//è‡ªæ£€
 	{
-		std::cout << "Started thread id=" << std::this_thread::get_id() << std::endl;//Êä³öÏß³ÌID£¨Êµ¼ÊÉÏÒ»Ö±ÊÇÍ¬Ò»¸ö£©
+		std::cout << "Started thread id=" << std::this_thread::get_id() << std::endl;//è¾“å‡ºçº¿ç¨‹IDï¼ˆå®é™…ä¸Šä¸€ç›´æ˜¯åŒä¸€ä¸ªï¼‰
 		std::cout << "Working...\n";
 		std::this_thread::sleep_for(1s);
 	}
@@ -16,9 +16,10 @@ void DoWork()
 
 int main()
 {
-	std::thread worker(DoWork);//ÈÃÕâ¸övoid³ÖĞø¹¤×÷
+	std::thread worker(DoWork);//è®©è¿™ä¸ªvoidæŒç»­å·¥ä½œ
 	std::cin.get();
-	s_Finished = true;//¸Ä±ä×Ô¼ìÌõ¼ş
-	worker.join();//DoWork¹¤×÷½áÊøºóÔÙ½øĞĞÖ÷³ÌĞòÄÚÈİ
-	std::cout << "Started thread id=" << std::this_thread::get_id() << std::endl;//ÕâÀïÏß³ÌID¸Ä±ä
+	s_Finished = true;//æ”¹å˜è‡ªæ£€æ¡ä»¶
+	worker.join();//DoWorkå·¥ä½œç»“æŸåå†è¿›è¡Œä¸»ç¨‹åºå†…å®¹
+	std::cout << "Started thread id=" << std::this_thread::get_id() << std::endl;//è¿™é‡Œçº¿ç¨‹IDæ”¹å˜
 }
+

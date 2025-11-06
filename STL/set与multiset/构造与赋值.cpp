@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<set>
 
 void printSet(std::set<int>& s)
@@ -9,7 +9,7 @@ void printSet(std::set<int>& s)
 	}
 	std::cout << std::endl;
 }
-void printMultiSet(std::multiset<int>& s)//¿ÉÒÔ°üº¬ÏàÍ¬µÄÔªËØ
+void printMultiSet(std::multiset<int>& s)//å¯ä»¥åŒ…å«ç›¸åŒçš„å…ƒç´ 
 {
 	for (const int& it : s)
 	{
@@ -18,7 +18,7 @@ void printMultiSet(std::multiset<int>& s)//¿ÉÒÔ°üº¬ÏàÍ¬µÄÔªËØ
 	std::cout << std::endl;
 }
 
-//¹¹ÔìºÍ¸³Öµ
+//æ„é€ å’Œèµ‹å€¼
 void test01()
 {
 	std::set<int> s1;
@@ -27,14 +27,14 @@ void test01()
 	s1.insert(30);
 	s1.insert(20);
 	s1.insert(90);
-	s1.insert(90);//ÒÑ¾­ÓĞ90ÁË£¬²»»áÌí¼ÓµÚ¶ş¸ö90£¬µ«ÊÇmultiset¿ÉÒÔ
+	s1.insert(90);//å·²ç»æœ‰90äº†ï¼Œä¸ä¼šæ·»åŠ ç¬¬äºŒä¸ª90ï¼Œä½†æ˜¯multisetå¯ä»¥
 	printSet(s1);
 
-	//¿½±´¹¹Ôì
-	std::set<int>s2(s1);//setÓëmultisetÖ®¼ä²»ÄÜÏà»¥×ª»»
+	//æ‹·è´æ„é€ 
+	std::set<int>s2(s1);//setä¸multisetä¹‹é—´ä¸èƒ½ç›¸äº’è½¬æ¢
 	printSet(s2);
 
-	//¸³Öµ
+	//èµ‹å€¼
 	std::set<int>s3;
 	s3 = s2;
 	printSet(s3);
@@ -44,3 +44,4 @@ int main()
 {
 	test01();
 }
+

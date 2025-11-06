@@ -1,8 +1,8 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include <vector>
 #include <algorithm>
 
-struct GreaterFive		//Ò»ÔªÎ½´Ê
+struct GreaterFive		//ä¸€å…ƒè°“è¯
 {
 	bool operator()(int val) 
 	{
@@ -21,16 +21,16 @@ void test01()
 	std::vector<int>::iterator it = find_if(v.begin(), v.end(), GreaterFive());
 	if (it == v.end()) 
 	{
-		std::cout << "Ã»ÕÒµ½!" << std::endl;
+		std::cout << "æ²¡æ‰¾åˆ°!" << std::endl;
 	}
 	else 
 	{
-		std::cout << "ÕÒµ½:" << *it << std::endl;
+		std::cout << "æ‰¾åˆ°:" << *it << std::endl;
 	}
 
 }
 
-class MyCompare		//¶şÔªÎ½´Ê
+class MyCompare		//äºŒå…ƒè°“è¯
 {
 public:
 	bool operator()(int num1, int num2)
@@ -47,7 +47,7 @@ void test02()
 	v.push_back(30);
 	v.push_back(50);
 
-	//Ä¬ÈÏ´ÓĞ¡µ½´ó
+	//é»˜è®¤ä»å°åˆ°å¤§
 	sort(v.begin(), v.end());
 	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
 	{
@@ -56,7 +56,7 @@ void test02()
 	std::cout << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
-	//Ê¹ÓÃº¯Êı¶ÔÏó¸Ä±äËã·¨²ßÂÔ£¬ÅÅĞò´Ó´óµ½Ğ¡
+	//ä½¿ç”¨å‡½æ•°å¯¹è±¡æ”¹å˜ç®—æ³•ç­–ç•¥ï¼Œæ’åºä»å¤§åˆ°å°
 	sort(v.begin(), v.end(), MyCompare());
 	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
 	{
@@ -69,3 +69,4 @@ int main()
 	test01();
 	test02();
 }
+

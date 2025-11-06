@@ -1,9 +1,9 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//vector& operator=(const vector& vec);		// ÖØÔØµÈºÅ²Ù×÷·û
-//assign(beg, end);			//½«[beg, end)Çø¼äÖĞµÄÊı¾İ¿½±´¸³Öµ¸ø±¾Éí¡£
-//assign(n, elem);			//½«n¸öelem¿½±´¸³Öµ¸ø±¾Éí¡£
+//vector& operator=(const vector& vec);		// é‡è½½ç­‰å·æ“ä½œç¬¦
+//assign(beg, end);			//å°†[beg, end)åŒºé—´ä¸­çš„æ•°æ®æ‹·è´èµ‹å€¼ç»™æœ¬èº«ã€‚
+//assign(n, elem);			//å°†nä¸ªelemæ‹·è´èµ‹å€¼ç»™æœ¬èº«ã€‚
 
 template <class T>
 void printVector(vector<T>& v) {
@@ -14,10 +14,10 @@ void printVector(vector<T>& v) {
 	cout << endl;
 }
 
-//¸³Öµ²Ù×÷
+//èµ‹å€¼æ“ä½œ
 void test01()
 {
-	vector<string> v1(3,"ËÕÜç"); 
+	vector<string> v1(3,"è‹èŒœ"); 
 	printVector(v1);
 
 	vector<string>v2;
@@ -29,7 +29,7 @@ void test01()
 	printVector(v3);
 
 	vector<string>v4;
-	v4.assign(5, "¿É°®");
+	v4.assign(5, "å¯çˆ±");
 	printVector(v4);
 }
 
@@ -41,3 +41,4 @@ int main() {
 
 	return 0;
 }
+

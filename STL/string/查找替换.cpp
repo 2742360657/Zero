@@ -1,27 +1,27 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//* `int find(const string& str, int pos = 0) const; `              //²éÕÒstrµÚÒ»´Î³öÏÖÎ»ÖÃ,´Ópos¿ªÊ¼²éÕÒ
-//* `int find(const char* s, int pos = 0) const; `                     //²éÕÒsµÚÒ»´Î³öÏÖÎ»ÖÃ,´Ópos¿ªÊ¼²éÕÒ
-//* `int find(const char* s, int pos, int n) const; `               //´ÓposÎ»ÖÃ²éÕÒsµÄÇ°n¸ö×Ö·ûµÚÒ»´ÎÎ»ÖÃ
-//* `int find(const char c, int pos = 0) const; `                       //²éÕÒ×Ö·ûcµÚÒ»´Î³öÏÖÎ»ÖÃ
-//* `int rfind(const string& str, int pos = npos) const; `      //²éÕÒstr×îºóÒ»´ÎÎ»ÖÃ,´Ópos¿ªÊ¼²éÕÒ
-//* `int rfind(const char* s, int pos = npos) const; `              //²éÕÒs×îºóÒ»´Î³öÏÖÎ»ÖÃ,´Ópos¿ªÊ¼²éÕÒ
-//* `int rfind(const char* s, int pos, int n) const; `              //´Ópos²éÕÒsµÄÇ°n¸ö×Ö·û×îºóÒ»´ÎÎ»ÖÃ
-//* `int rfind(const char c, int pos = 0) const;  `                      //²éÕÒ×Ö·ûc×îºóÒ»´Î³öÏÖÎ»ÖÃ
-//* `string& replace(int pos, int n, const string& str); `       //Ìæ»»´Ópos¿ªÊ¼n¸ö×Ö·ûÎª×Ö·û´®str
-//* `string& replace(int pos, int n, const char* s); `                 //Ìæ»»´Ópos¿ªÊ¼µÄn¸ö×Ö·ûÎª×Ö·û´®s
+//* `int find(const string& str, int pos = 0) const; `              //æŸ¥æ‰¾strç¬¬ä¸€æ¬¡å‡ºç°ä½ç½®,ä»poså¼€å§‹æŸ¥æ‰¾
+//* `int find(const char* s, int pos = 0) const; `                     //æŸ¥æ‰¾sç¬¬ä¸€æ¬¡å‡ºç°ä½ç½®,ä»poså¼€å§‹æŸ¥æ‰¾
+//* `int find(const char* s, int pos, int n) const; `               //ä»posä½ç½®æŸ¥æ‰¾sçš„å‰nä¸ªå­—ç¬¦ç¬¬ä¸€æ¬¡ä½ç½®
+//* `int find(const char c, int pos = 0) const; `                       //æŸ¥æ‰¾å­—ç¬¦cç¬¬ä¸€æ¬¡å‡ºç°ä½ç½®
+//* `int rfind(const string& str, int pos = npos) const; `      //æŸ¥æ‰¾stræœ€åä¸€æ¬¡ä½ç½®,ä»poså¼€å§‹æŸ¥æ‰¾
+//* `int rfind(const char* s, int pos = npos) const; `              //æŸ¥æ‰¾sæœ€åä¸€æ¬¡å‡ºç°ä½ç½®,ä»poså¼€å§‹æŸ¥æ‰¾
+//* `int rfind(const char* s, int pos, int n) const; `              //ä»posæŸ¥æ‰¾sçš„å‰nä¸ªå­—ç¬¦æœ€åä¸€æ¬¡ä½ç½®
+//* `int rfind(const char c, int pos = 0) const;  `                      //æŸ¥æ‰¾å­—ç¬¦cæœ€åä¸€æ¬¡å‡ºç°ä½ç½®
+//* `string& replace(int pos, int n, const string& str); `       //æ›¿æ¢ä»poså¼€å§‹nä¸ªå­—ç¬¦ä¸ºå­—ç¬¦ä¸²str
+//* `string& replace(int pos, int n, const char* s); `                 //æ›¿æ¢ä»poså¼€å§‹çš„nä¸ªå­—ç¬¦ä¸ºå­—ç¬¦ä¸²s
 
 void test01()
 {
-	//²éÕÒ
+	//æŸ¥æ‰¾
 	string str1 = "abcdefgde";
 
 	int pos = str1.find("de",4);
 
 	if (pos == -1)
 	{
-		cout << "Î´ÕÒµ½" << endl;
+		cout << "æœªæ‰¾åˆ°" << endl;
 	}
 	else
 	{
@@ -37,7 +37,7 @@ void test01()
 
 void test02()
 {
-	//Ìæ»»
+	//æ›¿æ¢
 	string str1 = "abcdefgde";
 	str1.replace(1, 3, "1111");
 
@@ -51,3 +51,4 @@ int main() {
 
 	return 0;
 }
+

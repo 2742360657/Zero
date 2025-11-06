@@ -1,6 +1,7 @@
-#include<iostream>
+ï»¿#include<iostream>
 
 int main()
 {
-	std::cout << "ËÕÜç";
+	std::cout << "è‹èŒœ";
 } 
+

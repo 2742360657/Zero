@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include <list>
 #include <string>
 class Person
@@ -11,9 +11,9 @@ public:
 	}
 
 public:
-	std::string m_Name;  //ĞÕÃû
-	int m_Age;      //ÄêÁä
-	int m_Height;   //Éí¸ß
+	std::string m_Name;  //å§“å
+	int m_Age;      //å¹´é¾„
+	int m_Height;   //èº«é«˜
 };
 
 bool ComparePerson(Person a, Person b)
@@ -32,12 +32,12 @@ void test01() {
 
 	std::list<Person> L;
 
-	Person p1("Áõ±¸", 35, 175);
-	Person p2("²Ü²Ù", 45, 180);
-	Person p3("ËïÈ¨", 40, 170);
-	Person p4("ÕÔÔÆ", 25, 190);
-	Person p5("ÕÅ·É", 35, 160);
-	Person p6("¹ØÓğ", 35, 200);
+	Person p1("åˆ˜å¤‡", 35, 175);
+	Person p2("æ›¹æ“", 45, 180);
+	Person p3("å­™æƒ", 40, 170);
+	Person p4("èµµäº‘", 25, 190);
+	Person p5("å¼ é£", 35, 160);
+	Person p6("å…³ç¾½", 35, 200);
 
 	L.push_back(p1);
 	L.push_back(p2);
@@ -48,14 +48,14 @@ void test01() {
 
 	for (std::list<Person>::iterator it = L.begin(); it != L.end(); it++)
 	{
-		std::cout << "ĞÕÃû£º " << it->m_Name << " ÄêÁä£º " << it->m_Age << " Éí¸ß£º " << it->m_Height << std::endl;
+		std::cout << "å§“åï¼š " << it->m_Name << " å¹´é¾„ï¼š " << it->m_Age << " èº«é«˜ï¼š " << it->m_Height << std::endl;
 	}
 
 	std::cout << "---------------------------------" << std::endl;
-	L.sort(ComparePerson); //ÅÅĞò
+	L.sort(ComparePerson); //æ’åº
 
 	for (std::list<Person>::iterator it = L.begin(); it != L.end(); it++) {
-		std::cout << "ĞÕÃû£º " << it->m_Name << " ÄêÁä£º " << it->m_Age << " Éí¸ß£º " << it->m_Height << std::endl;
+		std::cout << "å§“åï¼š " << it->m_Name << " å¹´é¾„ï¼š " << it->m_Age << " èº«é«˜ï¼š " << it->m_Height << std::endl;
 	}
 }
 
@@ -63,3 +63,4 @@ int main()
 {
 	test01();
 }
+

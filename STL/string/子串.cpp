@@ -1,16 +1,16 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std; 
 
 void test01()
 {
-	//string substr(int pos = 0, int n = npos) const;  //·µ»ØÓÉpos¿ªÊ¼µÄn¸ö×Ö·û×é³ÉµÄ×Ö·û´®
+	//string substr(int pos = 0, int n = npos) const;  //è¿”å›ç”±poså¼€å§‹çš„nä¸ªå­—ç¬¦ç»„æˆçš„å­—ç¬¦ä¸²
 	string str = "abcdefg";
 	string subStr = str.substr(1, 3);
 	cout << "subStr = " << subStr << endl;
 
 	string email = "hello@sina.com";
 	int pos = email.find("@");
-	string direction = email.substr(pos, string::npos);//³¤¶Èstring::npos±íÊ¾µ½Ä©Î²£¨ºÃÏñÒ²¿ÉÒÔĞ´ÌØ±ğ´ó£¬ÓĞÔ½½ç±£»¤£©
+	string direction = email.substr(pos, string::npos);//é•¿åº¦string::nposè¡¨ç¤ºåˆ°æœ«å°¾ï¼ˆå¥½åƒä¹Ÿå¯ä»¥å†™ç‰¹åˆ«å¤§ï¼Œæœ‰è¶Šç•Œä¿æŠ¤ï¼‰
 	cout << "direction: " << direction << endl;
 
 }
@@ -23,3 +23,4 @@ int main() {
 
 	return 0;
 }
+

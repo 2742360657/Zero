@@ -1,7 +1,7 @@
-#include <string>
+О╩©#include <string>
 #include<iostream>
 
-//1║╒╨╞йЩ╤тоСтзй╧сцй╠ё╛©иртоЯфум╗╨╞йЩдгяЫ╣Всц, ©иртсп╡нйЩё╛©иртсп╥╣╩ьж╣
+//1Ц─│Е┤╫Ф∙╟Е╞╧Х╠║Е°╗Д╫©Г■╗Ф≈╤О╪▄Е▐╞Д╩╔Е┐▐Ф≥╝И─ Е┤╫Ф∙╟И┌ёФ═╥Х╟┐Г■╗, Е▐╞Д╩╔Ф°┴Е▐┌Ф∙╟О╪▄Е▐╞Д╩╔Ф°┴Х©■Е⌡·Е─╪
 class MyAdd
 {
 public:
@@ -17,7 +17,7 @@ void test01()
 	std::cout << myAdd(10, 10) << std::endl;
 }
 
-//2║╒╨╞йЩ╤тоС©иртспвт╪╨╣дв╢л╛
+//2Ц─│Е┤╫Ф∙╟Е╞╧Х╠║Е▐╞Д╩╔Ф°┴Х┤╙Е╥╠Г └Г┼╤Ф─│
 class MyPrint
 {
 public:
@@ -28,10 +28,10 @@ public:
 	void operator()(std::string test)
 	{
 		std::cout << test << std::endl;
-		count++; //мЁ╪фй╧сц╢нйЩ
+		count++; //Г╩÷Х╝║Д╫©Г■╗Ф╛║Ф∙╟
 	}
 
-	int count; //дз╡©вт╪╨╣дв╢л╛
+	int count; //Е├┘И┐╗Х┤╙Е╥╠Г └Г┼╤Ф─│
 };
 void test02()
 {
@@ -39,10 +39,10 @@ void test02()
 	myPrint("hello world");
 	myPrint("hello world");
 	myPrint("hello world");
-	std::cout << "myPrint╣Всц╢нйЩн╙ё╨ " << myPrint.count << std::endl;
+	std::cout << "myPrintХ╟┐Г■╗Ф╛║Ф∙╟Д╦╨О╪  " << myPrint.count << std::endl;
 }
 
-//3║╒╨╞йЩ╤тоС©иртвВн╙╡нйЩ╢╚╣щ
+//3Ц─│Е┤╫Ф∙╟Е╞╧Х╠║Е▐╞Д╩╔Д╫°Д╦╨Е▐┌Ф∙╟Д╪═И─▓
 void doPrint(MyPrint& mp, std::string test)
 {
 	mp(test);
@@ -60,3 +60,4 @@ int main()
 	test02();
 	test03();
 }
+

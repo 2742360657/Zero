@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
 void printVector(vector<int>& v) {
@@ -25,8 +25,8 @@ void test01()
 	}
 	printVector(v2);
 
-	//»¥»»ÈÝÆ÷
-	cout << "»¥»»ºó" << endl;
+	//äº’æ¢å®¹å™¨
+	cout << "äº’æ¢åŽ" << endl;
 	v1.swap(v2);
 	printVector(v1);
 	printVector(v2);
@@ -39,19 +39,19 @@ void test02()
 		v.push_back(i);
 	}
 
-	cout << "vµÄÈÝÁ¿Îª£º" << v.capacity() << endl;
-	cout << "vµÄ´óÐ¡Îª£º" << v.size() << endl;
+	cout << "vçš„å®¹é‡ä¸ºï¼š" << v.capacity() << endl;
+	cout << "vçš„å¤§å°ä¸ºï¼š" << v.size() << endl;
 
 	v.resize(3);
 
-	cout << "vµÄÈÝÁ¿Îª£º" << v.capacity() << endl;
-	cout << "vµÄ´óÐ¡Îª£º" << v.size() << endl;
+	cout << "vçš„å®¹é‡ä¸ºï¼š" << v.capacity() << endl;
+	cout << "vçš„å¤§å°ä¸ºï¼š" << v.size() << endl;
 
 	vector<int> a(5, 5);
 	vector<int>(a).swap(v); 
 
-	cout << "aµÄÈÝÁ¿Îª£º" << a.capacity() << endl;
-	cout << "aµÄ´óÐ¡Îª£º" << a.size() << endl;
+	cout << "açš„å®¹é‡ä¸ºï¼š" << a.capacity() << endl;
+	cout << "açš„å¤§å°ä¸ºï¼š" << a.size() << endl;
 }
 
 int main() {
@@ -64,3 +64,4 @@ int main() {
 
 	return 0;
 }
+

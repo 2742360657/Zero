@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 struct Direction
 {
 	float x = 0.0, y = 0.0;
@@ -9,9 +9,9 @@ struct Direction
 	}
 };
 
-struct Player:public Direction//´Ë´¦PlayerÖĞ°üÀ¨Direction£¬¼´Îª¼Ì³Ğ£¬¼Ì³Ğ·½·¨public·Ç±ØĞë
+struct Player:public Direction//æ­¤å¤„Playerä¸­åŒ…æ‹¬Directionï¼Œå³ä¸ºç»§æ‰¿ï¼Œç»§æ‰¿æ–¹æ³•publicéå¿…é¡»
 {
-	std::string name = "Î´ÃüÃû";
+	std::string name = "æœªå‘½å";
 	void Setname(std::string message)
 	{
 		name = message;
@@ -30,6 +30,7 @@ int main()
 	Player P1;
 	std::cout << "set name" << std::endl;
 	std::cin >> P1.name;
-	std::cout << "name£º" << P1.name << std::endl << "Direction:(" << P1.x << "," << P1.y << ")" << std::endl << "Hp:" << P1.Hp << std::endl;
+	std::cout << "nameï¼š" << P1.name << std::endl << "Direction:(" << P1.x << "," << P1.y << ")" << std::endl << "Hp:" << P1.Hp << std::endl;
 
 }
+

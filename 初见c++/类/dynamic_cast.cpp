@@ -1,9 +1,9 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 class Entity
 {
 public:
-    virtual ~Entity() {} // ĞéÎö¹¹º¯Êı£¬È·±£ÅÉÉúÀàµÄÎö¹¹º¯Êı±»ÕıÈ·µ÷ÓÃ
+    virtual ~Entity() {} // è™šææ„å‡½æ•°ï¼Œç¡®ä¿æ´¾ç”Ÿç±»çš„ææ„å‡½æ•°è¢«æ­£ç¡®è°ƒç”¨
 };
 
 class Player : public Entity
@@ -32,15 +32,15 @@ int main()
     Entity* actuallyPlayer = player;
     Entity* actuallyEnemy = enemy;
 
-    Player* p0 = dynamic_cast<Player*>(actuallyEnemy); // ÕâÀï»á·µ»Ø nullptr£¬ÒòÎª actuallyEnemyPtr Êµ¼ÊÉÏÊÇÒ»¸ö Enemy ÀàĞÍ
+    Player* p0 = dynamic_cast<Player*>(actuallyEnemy); // è¿™é‡Œä¼šè¿”å› nullptrï¼Œå› ä¸º actuallyEnemyPtr å®é™…ä¸Šæ˜¯ä¸€ä¸ª Enemy ç±»å‹
     if (p0)
     {
-        std::cout << "p0×ª»»³É¹¦ÁËß÷\n";
+        std::cout << "p0è½¬æ¢æˆåŠŸäº†å–µ\n";
     }
-    Player* p1 = dynamic_cast<Player*>(actuallyPlayer); // ÕâÀï»á³É¹¦×ª»»£¬·µ»Ø player Ö¸Õë
+    Player* p1 = dynamic_cast<Player*>(actuallyPlayer); // è¿™é‡Œä¼šæˆåŠŸè½¬æ¢ï¼Œè¿”å› player æŒ‡é’ˆ
     if (p1)
     {
-        std::cout << "p1×ª»»³É¹¦ÁËß÷\n";
+        std::cout << "p1è½¬æ¢æˆåŠŸäº†å–µ\n";
     }
 
     delete player;
@@ -48,3 +48,4 @@ int main()
 
     return 0;
 }
+

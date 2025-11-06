@@ -1,4 +1,4 @@
-#include<vector>
+ï»¿#include<vector>
 #include<algorithm>
 #include<iostream>
 
@@ -9,7 +9,7 @@ void test()
 	bool aaa = std::binary_search(a.begin(), a.end(), 7);
 	if (aaa)
 	{
-		std::cout << "ÓÐµÄÓÐµÄ";
+		std::cout << "æœ‰çš„æœ‰çš„";
 	};
 }
 
@@ -17,3 +17,4 @@ int main()
 {
 	test();
 }
+

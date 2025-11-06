@@ -1,4 +1,4 @@
-#include"ipch.h"
+﻿#include<iostream>
 int main()
 {
     int** a2d = new int* [50];
@@ -15,3 +15,4 @@ int main()
 
     std::cin.get();
 }
+

@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
 void printDeque(const deque<int>& d)
@@ -9,7 +9,7 @@ void printDeque(const deque<int>& d)
 	}
 	cout << endl;
 }
-//¸³Öµ²Ù×÷
+//èµ‹å€¼æ“ä½œ
 void test01()
 {
 	deque<int> d1;
@@ -41,3 +41,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<list>
 
 template<typename T>
@@ -15,3 +15,4 @@ int main()
 	std::list<int> a;
 	test01(a, 3, 5);
 }
+

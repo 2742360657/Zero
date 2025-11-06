@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
 void test01()
@@ -7,7 +7,7 @@ void test01()
 	str.insert(1, 3, '1');//str.insert(1, "111");
 	cout << str << endl;
 
-	str.erase(1, 3);  //´Ó1ºÅÎ»ÖÃ¿ªÊ¼3¸ö×Ö·û
+	str.erase(1, 3);  //ä»Ž1å·ä½ç½®å¼€å§‹3ä¸ªå­—ç¬¦
 	cout << str << endl;
 }
 
@@ -19,3 +19,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,19 +1,19 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//Á½¶Ë²åÈë²Ù×÷£º
-//push_back(elem)			ÔÚÈİÆ÷Î²²¿Ìí¼ÓÒ»¸öÊı¾İ
-//push_front(elem)			ÔÚÈİÆ÷Í·²¿²åÈëÒ»¸öÊı¾İ
-//pop_back()				É¾³ıÈİÆ÷×îºóÒ»¸öÊı¾İ
-//pop_front()				É¾³ıÈİÆ÷µÚÒ»¸öÊı¾İ
+//ä¸¤ç«¯æ’å…¥æ“ä½œï¼š
+//push_back(elem)			åœ¨å®¹å™¨å°¾éƒ¨æ·»åŠ ä¸€ä¸ªæ•°æ®
+//push_front(elem)			åœ¨å®¹å™¨å¤´éƒ¨æ’å…¥ä¸€ä¸ªæ•°æ®
+//pop_back()				åˆ é™¤å®¹å™¨æœ€åä¸€ä¸ªæ•°æ®
+//pop_front()				åˆ é™¤å®¹å™¨ç¬¬ä¸€ä¸ªæ•°æ®
 
-//Ö¸¶¨Î»ÖÃ²Ù×÷£º
-//insert(pos, elem)			ÔÚposÎ»ÖÃ²åÈëÒ»¸öelemÔªËØµÄ¿½±´£¬·µ»ØĞÂÊı¾İµÄÎ»ÖÃ¡£
-//insert(pos, n, elem)		ÔÚposÎ»ÖÃ²åÈën¸öelemÊı¾İ£¬ÎŞ·µ»ØÖµ¡£
-//insert(pos, beg, end)		ÔÚposÎ»ÖÃ²åÈë[beg,end)Çø¼äµÄÊı¾İ£¬ÎŞ·µ»ØÖµ¡£
-//clear()                   Çå¿ÕÈİÆ÷µÄËùÓĞÊı¾İ
-//erase(beg, end)			É¾³ı[beg,end)Çø¼äµÄÊı¾İ£¬·µ»ØÏÂÒ»¸öÊı¾İµÄÎ»ÖÃ¡£
-//erase(pos)				É¾³ıposÎ»ÖÃµÄÊı¾İ£¬·µ»ØÏÂÒ»¸öÊı¾İµÄÎ»ÖÃ¡£
+//æŒ‡å®šä½ç½®æ“ä½œï¼š
+//insert(pos, elem)			åœ¨posä½ç½®æ’å…¥ä¸€ä¸ªelemå…ƒç´ çš„æ‹·è´ï¼Œè¿”å›æ–°æ•°æ®çš„ä½ç½®ã€‚
+//insert(pos, n, elem)		åœ¨posä½ç½®æ’å…¥nä¸ªelemæ•°æ®ï¼Œæ— è¿”å›å€¼ã€‚
+//insert(pos, beg, end)		åœ¨posä½ç½®æ’å…¥[beg,end)åŒºé—´çš„æ•°æ®ï¼Œæ— è¿”å›å€¼ã€‚
+//clear()                   æ¸…ç©ºå®¹å™¨çš„æ‰€æœ‰æ•°æ®
+//erase(beg, end)			åˆ é™¤[beg,end)åŒºé—´çš„æ•°æ®ï¼Œè¿”å›ä¸‹ä¸€ä¸ªæ•°æ®çš„ä½ç½®ã€‚
+//erase(pos)				åˆ é™¤posä½ç½®çš„æ•°æ®ï¼Œè¿”å›ä¸‹ä¸€ä¸ªæ•°æ®çš„ä½ç½®ã€‚
 
 void printDeque(const deque<int>& d)
 {
@@ -23,27 +23,27 @@ void printDeque(const deque<int>& d)
 	}
 	cout << endl;
 }
-//Á½¶Ë²Ù×÷
+//ä¸¤ç«¯æ“ä½œ
 void test01()
 {
 	deque<int> d;
-	//Î²²å
+	//å°¾æ’
 	d.push_back(10);
 	d.push_back(20);
-	//Í·²å
+	//å¤´æ’
 	d.push_front(100);
 	d.push_front(200);
 
 	printDeque(d);
 
-	//Î²É¾
+	//å°¾åˆ 
 	d.pop_back();
-	//Í·É¾
+	//å¤´åˆ 
 	d.pop_front();
 	printDeque(d);
 }
 
-//²åÈë
+//æ’å…¥
 void test02()
 {
 	deque<int> d;
@@ -69,7 +69,7 @@ void test02()
 
 }
 
-//É¾³ı
+//åˆ é™¤
 void test03()
 {
 	deque<int> d;
@@ -99,3 +99,4 @@ int main() {
 
 	return 0;
 }
+

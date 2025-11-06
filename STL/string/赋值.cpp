@@ -1,13 +1,13 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 using namespace std;
 
-//string& operator=(const char* s);		//char*ÀàĞÍ×Ö·û´® ¸³Öµ¸øµ±Ç°µÄ×Ö·û´®
-//string& operator=(const string& s);	//°Ñ×Ö·û´®s¸³¸øµ±Ç°µÄ×Ö·û´®
-//string& operator=(char c);			//×Ö·û¸³Öµ¸øµ±Ç°µÄ×Ö·û´®
-//string& assign(const char* s);		//°Ñ×Ö·û´®s¸³¸øµ±Ç°µÄ×Ö·û´®
-//string& assign(const char* s, int n);	//°Ñ×Ö·û´®sµÄÇ°n¸ö×Ö·û¸³¸øµ±Ç°µÄ×Ö·û´®
-//string& assign(const string& s);		//°Ñ×Ö·û´®s¸³¸øµ±Ç°×Ö·û´®
-//string& assign(int n, char c);		//ÓÃn¸ö×Ö·ûc¸³¸øµ±Ç°×Ö·û´®
+//string& operator=(const char* s);		//char*ç±»å‹å­—ç¬¦ä¸² èµ‹å€¼ç»™å½“å‰çš„å­—ç¬¦ä¸²
+//string& operator=(const string& s);	//æŠŠå­—ç¬¦ä¸²sèµ‹ç»™å½“å‰çš„å­—ç¬¦ä¸²
+//string& operator=(char c);			//å­—ç¬¦èµ‹å€¼ç»™å½“å‰çš„å­—ç¬¦ä¸²
+//string& assign(const char* s);		//æŠŠå­—ç¬¦ä¸²sèµ‹ç»™å½“å‰çš„å­—ç¬¦ä¸²
+//string& assign(const char* s, int n);	//æŠŠå­—ç¬¦ä¸²sçš„å‰nä¸ªå­—ç¬¦èµ‹ç»™å½“å‰çš„å­—ç¬¦ä¸²
+//string& assign(const string& s);		//æŠŠå­—ç¬¦ä¸²sèµ‹ç»™å½“å‰å­—ç¬¦ä¸²
+//string& assign(int n, char c);		//ç”¨nä¸ªå­—ç¬¦cèµ‹ç»™å½“å‰å­—ç¬¦ä¸²
 
 int main() {
 
@@ -33,7 +33,7 @@ int main() {
 
 
 	string str6;
-	str6.assign(str4, 5, 3);//ÓÃstr4´ÓµÚ6Î»£¨¼´[5])¿ªÊ¼¸³Öµ£¬¸³Öµ³¤¶ÈÎª3
+	str6.assign(str4, 5, 3);//ç”¨str4ä»ç¬¬6ä½ï¼ˆå³[5])å¼€å§‹èµ‹å€¼ï¼Œèµ‹å€¼é•¿åº¦ä¸º3
 	cout << "str6 = " << str6 << endl;
 
 	string str7;
@@ -44,3 +44,4 @@ int main() {
 
 	return 0;
 }
+

@@ -1,11 +1,11 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 void PrintValue(int value)
 {
     std::cout << "Value: " << value << std::endl;
 }
 
-void ForEach(const std::vector<int>& values, void(*func)(int))//×¢Òâ·½·¨µÄÊı¾İÀàĞÍÔ­Ê¼º¯ÊıÖ¸Õëvoid(*func)(int)£¬funcÊÇ±äÁ¿Ãû£¬intÊÇÊ¹ÓÃµÄ²ÎÊı
+void ForEach(const std::vector<int>& values, void(*func)(int))//æ³¨æ„æ–¹æ³•çš„æ•°æ®ç±»å‹åŸå§‹å‡½æ•°æŒ‡é’ˆvoid(*func)(int)ï¼Œfuncæ˜¯å˜é‡åï¼Œintæ˜¯ä½¿ç”¨çš„å‚æ•°
 {
     for (int value : values)
     {
@@ -20,3 +20,4 @@ int main()
 
     std::cin.get();
 }
+

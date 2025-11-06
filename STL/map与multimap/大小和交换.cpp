@@ -1,4 +1,4 @@
-#include <map>
+ï»¿#include <map>
 #include<iostream>
 
 void printmap(std::map<int, int>& m)
@@ -19,17 +19,17 @@ void test01()
 
 	if (m.empty())
 	{
-		std::cout << "mÎª¿Õ" << std::endl;
+		std::cout << "mä¸ºç©º" << std::endl;
 	}
 	else
 	{
-		std::cout << "m²»Îª¿Õ" << std::endl;
-		std::cout << "mµÄ´óÐ¡Îª£º " << m.size() << std::endl;
+		std::cout << "mä¸ä¸ºç©º" << std::endl;
+		std::cout << "mçš„å¤§å°ä¸ºï¼š " << m.size() << std::endl;
 	}
 }
 
 
-//½»»»
+//äº¤æ¢
 void test02()
 {
 	std::map<int, int>m;
@@ -42,11 +42,11 @@ void test02()
 	m2.insert(std::pair<int, int>(5, 200));
 	m2.insert(std::pair<int, int>(6, 300));
 
-	std::cout << "½»»»Ç°" << std::endl;
+	std::cout << "äº¤æ¢å‰" << std::endl;
 	printmap(m);
 	printmap(m2);
 
-	std::cout << "½»»»ºó" << std::endl;
+	std::cout << "äº¤æ¢åŽ" << std::endl;
 	m.swap(m2);
 	printmap(m);
 	printmap(m2);
@@ -57,3 +57,4 @@ int main()
 	test01();
 	test02();
 }
+

@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 class Entity
 {
@@ -7,7 +7,7 @@ public:
 public:
     void Print() const
     {
-        std::cout << "ËÕÜç" << std::endl;
+        std::cout << "è‹èŒœ" << std::endl;
     }
     friend class ScopedPtr;
 };
@@ -37,3 +37,4 @@ int main()
     entity->Print();
     std::cin.get(); 
 }
+

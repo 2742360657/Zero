@@ -1,28 +1,29 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
 std::optional<std::string> ReadFileAsString(const std::string& filepath)
 {
-    std::ifstream stream(filepath);// Ê¹ÓÃ ifstream ´´½¨Ò»¸öÊäÈëÎÄ¼şÁ÷¶ÔÏó£¬³¢ÊÔ´ò¿ªÖ¸¶¨Â·¾¶µÄÎÄ¼ş
+    std::ifstream stream(filepath);// ä½¿ç”¨ ifstream åˆ›å»ºä¸€ä¸ªè¾“å…¥æ–‡ä»¶æµå¯¹è±¡ï¼Œå°è¯•æ‰“å¼€æŒ‡å®šè·¯å¾„çš„æ–‡ä»¶
     if (stream)
     {
-        std::string result;//´æ´¢¶ÁÈ¡½á¹û
-        // ¶ÁÈ¡ÎÄ¼ş
+        std::string result;//å­˜å‚¨è¯»å–ç»“æœ
+        // è¯»å–æ–‡ä»¶
         stream.close();
         return result;
     }
-    return {}; // Èç¹ûÎÄ¼şÎ´ÄÜ´ò¿ª£¬·µ»ØÒ»¸ö¿ÕµÄ std::optional ¶ÔÏó
+    return {}; // å¦‚æœæ–‡ä»¶æœªèƒ½æ‰“å¼€ï¼Œè¿”å›ä¸€ä¸ªç©ºçš„ std::optional å¯¹è±¡
 }
 
 int main()
 {
-    auto data = ReadFileAsString("data.txt");// µ÷ÓÃ ReadFileAsString º¯Êı³¢ÊÔ¶ÁÈ¡ "data.txt" ÎÄ¼şµÄÄÚÈİ
-    if (data)// ¼ì²é std::optional ¶ÔÏóÊÇ·ñ°üº¬Öµ£¨¼´ÎÄ¼şÊÇ·ñ³É¹¦¶ÁÈ¡£©
+    auto data = ReadFileAsString("data.txt");// è°ƒç”¨ ReadFileAsString å‡½æ•°å°è¯•è¯»å– "data.txt" æ–‡ä»¶çš„å†…å®¹
+    if (data)// æ£€æŸ¥ std::optional å¯¹è±¡æ˜¯å¦åŒ…å«å€¼ï¼ˆå³æ–‡ä»¶æ˜¯å¦æˆåŠŸè¯»å–ï¼‰
     {
-        std::cout << "³É¹¦¶ÁÈ¡\n";
+        std::cout << "æˆåŠŸè¯»å–\n";
     }
     else
     {
-        std::cout << "¶ÁÈ¡Ê§°Ü\n";
+        std::cout << "è¯»å–å¤±è´¥\n";
     }
     return 0;
 }
+

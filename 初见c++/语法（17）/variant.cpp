@@ -1,25 +1,25 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
-enum class ErrorCode// ¶¨ÒåÒ»¸öÃ¶¾ÙÀà£¬ÓÃÓÚ±íÊ¾²»Í¬µÄ´íÎó´úÂë
+enum class ErrorCode// å®šä¹‰ä¸€ä¸ªæšä¸¾ç±»ï¼Œç”¨äºè¡¨ç¤ºä¸åŒçš„é”™è¯¯ä»£ç 
 {
-	None = 0,    // Ã»ÓĞ´íÎó
-	NotFound = 1, // ÎÄ¼şÎ´ÕÒµ½
-	NoAccess = 2  // Ã»ÓĞ·ÃÎÊÈ¨ÏŞ
+	None = 0,    // æ²¡æœ‰é”™è¯¯
+	NotFound = 1, // æ–‡ä»¶æœªæ‰¾åˆ°
+	NoAccess = 2  // æ²¡æœ‰è®¿é—®æƒé™
 };
 
 std::variant<std::string, ErrorCode> ReadFileAsString()
 {
-	//¶ÁÈ¡ÎÄ¼ş£¬·µ»ØÎÄ¼şÀàĞÍ£¨string£©»òÕß¶ÁÈ¡Çé¿ö£¨Error Code£©\
-	¼´¿ÉÒÔÖ±½Ó¶ÁÈ¡£¬×Ô¶¯Ê¶±ğÀàĞÍ(´Ë´¦²»ÔÊĞíÊ¹ÓÃauto£©
+	//è¯»å–æ–‡ä»¶ï¼Œè¿”å›æ–‡ä»¶ç±»å‹ï¼ˆstringï¼‰æˆ–è€…è¯»å–æƒ…å†µï¼ˆError Codeï¼‰\
+	å³å¯ä»¥ç›´æ¥è¯»å–ï¼Œè‡ªåŠ¨è¯†åˆ«ç±»å‹(æ­¤å¤„ä¸å…è®¸ä½¿ç”¨autoï¼‰
 }
 
 int main()
 {
 	std::variant<std::string, int> data;
 	data = 520;
-	data = "ËÕÜç";
-	rsize_t a = data.index();//ÕâÀï»á·µ»Ø1£¬¼´¿ÉÄÜµÄÊı¾İÀàĞÍµÄÎ»ÖÃ
-	if(std::get_if<std::string>(&data))//Èç¹ûÊÇÕâ¸öÀàĞÍ£¬·µ»ØµØÖ·£¬²»ÊÇÔò·µ»Ø¿ÕÖ¸Õë
+	data = "è‹èŒœ";
+	rsize_t a = data.index();//è¿™é‡Œä¼šè¿”å›1ï¼Œå³å¯èƒ½çš„æ•°æ®ç±»å‹çš„ä½ç½®
+	if(std::get_if<std::string>(&data))//å¦‚æœæ˜¯è¿™ä¸ªç±»å‹ï¼Œè¿”å›åœ°å€ï¼Œä¸æ˜¯åˆ™è¿”å›ç©ºæŒ‡é’ˆ
 	{
 		std::cout << std::get<std::string>(data) << "\n";
 	}
@@ -28,3 +28,4 @@ int main()
 		std::cout << std::get<int>(data) << "\n";
 	}
 }
+

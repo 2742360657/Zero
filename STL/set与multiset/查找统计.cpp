@@ -1,28 +1,28 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<set>
 
 void test01()
 {
 	std::multiset<int> s1;
-	//²åÈë
+	//æ’å…¥
 	s1.insert(10);
 	s1.insert(30);
 	s1.insert(20);
 	s1.insert(40);
 
-	//²éÕÒ
+	//æŸ¥æ‰¾
 	std::set<int>::iterator pos = s1.find(30);
 
 	if (pos != s1.end())
 	{
-		std::cout << "ÕÒµ½ÁËÔªËØ £º " << *pos << std::endl;
+		std::cout << "æ‰¾åˆ°äº†å…ƒç´  ï¼š " << *pos << std::endl;
 	}
 	else
 	{
-		std::cout << "Î´ÕÒµ½ÔªËØ" << std::endl;
+		std::cout << "æœªæ‰¾åˆ°å…ƒç´ " << std::endl;
 	}
 
-	//Í³¼Æ
+	//ç»Ÿè®¡
 	int num = s1.count(1314);
 	std::cout << "num = " << num << std::endl;
 	num = s1.count(30);
@@ -38,3 +38,4 @@ int main()
 {
 	test01();
 }
+

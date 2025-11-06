@@ -1,11 +1,11 @@
-#include <vector>
+ï»¿#include <vector>
 #include <functional>
 #include<iostream>
 #include <algorithm>
 
-//template<class T > bool logical_and<T>	//Âß¼­Óë
-//template<class T > bool logical_or<T>		//Âß¼­»ò
-//template<class T > bool logical_not<T>	//Âß¼­·Ç
+//template<class T > bool logical_and<T>	//é€»è¾‘ä¸
+//template<class T > bool logical_or<T>		//é€»è¾‘æˆ–
+//template<class T > bool logical_not<T>	//é€»è¾‘é
 
 void test01()
 {
@@ -21,7 +21,7 @@ void test01()
 	}
 	std::cout << std::endl;
 
-	//Âß¼­·Ç  ½«vÈİÆ÷°áÔËµ½v2ÖĞ£¬²¢Ö´ĞĞÂß¼­·ÇÔËËã
+	//é€»è¾‘é  å°†vå®¹å™¨æ¬è¿åˆ°v2ä¸­ï¼Œå¹¶æ‰§è¡Œé€»è¾‘éè¿ç®—
 	std::vector<bool> v2;
 	v2.resize(v.size());
 	transform(v.begin(), v.end(), v2.begin(), std::logical_not<bool>());
@@ -36,3 +36,4 @@ int main()
 {
 	test01();
 }
+

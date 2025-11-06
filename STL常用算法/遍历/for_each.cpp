@@ -1,13 +1,13 @@
-#include <algorithm>
+ï»¿#include <algorithm>
 #include <vector>
 #include<iostream>
 
-//ÆÕÍ¨º¯Êý
+//æ™®é€šå‡½æ•°
 void print01(int val)
 {
 	std::cout << val << " ";
 }
-//º¯Êý¶ÔÏó
+//å‡½æ•°å¯¹è±¡
 class print02
 {
 public:
@@ -17,7 +17,7 @@ public:
 	}
 };
 
-//for_eachËã·¨»ù±¾ÓÃ·¨
+//for_eachç®—æ³•åŸºæœ¬ç”¨æ³•
 void test01() 
 {
 
@@ -27,7 +27,7 @@ void test01()
 		v.push_back(i);
 	}
 
-	//±éÀúËã·¨
+	//éåŽ†ç®—æ³•
 	for_each(v.begin(), v.end(), print01);
 	std::cout << std::endl;
 
@@ -39,3 +39,4 @@ int main()
 {
 	test01();
 }
+

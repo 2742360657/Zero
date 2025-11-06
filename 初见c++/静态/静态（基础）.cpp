@@ -1,10 +1,10 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 
-void m1(int message)//Í¬Ò»¸öexeµÄÆäËûcpp¿ÉÒÔÓÃm1Íê³ÉÊä³ö£¨²»ÔÚclassºÍstructÄÚÊ±£¬ÏÂÍ¬£©
+void m1(int message)//åŒä¸€ä¸ªexeçš„å…¶ä»–cppå¯ä»¥ç”¨m1å®Œæˆè¾“å‡ºï¼ˆä¸åœ¨classå’Œstructå†…æ—¶ï¼Œä¸‹åŒï¼‰
 {
 	std::cout << message;
 }
-static void m2(int message)//½öµ±Ç°cpp¿ÉÓÃ
+static void m2(int message)//ä»…å½“å‰cppå¯ç”¨
 {
 	std::cout << message;
 }
@@ -13,3 +13,4 @@ int main()
 {
 	m1(6);
 }
+

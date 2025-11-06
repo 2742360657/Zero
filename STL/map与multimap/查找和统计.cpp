@@ -1,4 +1,4 @@
-#include <map>
+ï»¿#include <map>
 #include<iostream>
 
 void printMap(std::map<int, int>& m)
@@ -10,7 +10,7 @@ void printMap(std::map<int, int>& m)
 	std::cout << std::endl;
 }
 
-//²éÕÒºÍÍ³¼Æ(¶¼ÊÇÕë¶ÔkeyÖµ£©
+//æŸ¥æ‰¾å’Œç»Ÿè®¡(éƒ½æ˜¯é’ˆå¯¹keyå€¼ï¼‰
 void test01()
 {
 	std::map<int, int>m;
@@ -23,14 +23,14 @@ void test01()
 	std::map<int, int>::iterator pos = m.find(3);
 	if (pos != m.end())
 	{
-		std::cout << "ÕÒµ½ÁËÔªËØ \nkey = " << (*pos).first << " value = " << (*pos).second << std::endl;
+		std::cout << "æ‰¾åˆ°äº†å…ƒç´  \nkey = " << (*pos).first << " value = " << (*pos).second << std::endl;
 	}
 	else
 	{
-		std::cout << "Î´ÕÒµ½ÔªËØ" << std::endl;
+		std::cout << "æœªæ‰¾åˆ°å…ƒç´ " << std::endl;
 	}
 
-	//Í³¼Æ
+	//ç»Ÿè®¡
 	int num = m.count(3);
 	std::cout << "num = " << num << std::endl;
 }
@@ -41,3 +41,4 @@ int main()
 {
 	test01();
 }
+

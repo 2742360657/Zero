@@ -1,4 +1,4 @@
-#include"ipch.h"
+ï»¿#include<iostream>
 std::tuple<std::string, int> player(int age,std::string name)
 {
 	return { name,age };
@@ -6,6 +6,7 @@ std::tuple<std::string, int> player(int age,std::string name)
 
 int main()
 {
-	auto [name, age] = player(5, "suxi");//c++17¼°ÒÔºó
+	auto [name, age] = player(5, "suxi");//c++17åŠä»¥å
 	std::cout << name;
 }
+

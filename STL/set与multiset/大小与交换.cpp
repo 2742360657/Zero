@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<set>
 
 void printSet(std::multiset<int>& s)
@@ -15,7 +15,7 @@ void test()
 	std::multiset<int> a;
 	if (a.empty())
 	{
-		std::cout << "ÎÞ\n";
+		std::cout << "æ— \n";
 	}
 	a.insert(55);
 	a.insert(55);
@@ -35,7 +35,7 @@ void test()
 	printSet(b);
 	std::cout << b.size() << "\n";
 	std::cout << b.max_size() << "\n";
-	a.swap(b); //½»»»Ê±Ö»ÄÜÊÇÍ¬ÀàÐÍ;
+	a.swap(b); //äº¤æ¢æ—¶åªèƒ½æ˜¯åŒç±»åž‹;
 	printSet(a);
 	printSet(b);
 	std::cout << a.size() << "\n";
@@ -48,3 +48,4 @@ int main()
 {
 	test();
 }
+

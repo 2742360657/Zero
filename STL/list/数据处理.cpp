@@ -1,8 +1,8 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<list>
 
-//reverse();		//·´×ªÁ´±í
-//sort();			//Á´±íÅÅĞò
+//reverse();		//åè½¬é“¾è¡¨
+//sort();			//é“¾è¡¨æ’åº
 
 void printList(const std::list<int>& L) 
 {
@@ -39,3 +39,4 @@ int main()
 {
 	test01();
 }
+

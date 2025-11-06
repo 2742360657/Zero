@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 
 struct erwei
 {
@@ -24,3 +24,4 @@ int main()
 	dizhi = dizhi + sudu;
 	std::cout << dizhi.x << "," << dizhi.y;
 }
+

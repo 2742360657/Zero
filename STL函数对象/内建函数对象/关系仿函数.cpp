@@ -1,14 +1,14 @@
-#include <functional>
+ï»¿#include <functional>
 #include<iostream>
 #include <vector>
 #include <algorithm>
 
-//template<class T > bool equal_to<T>           //µÈÓÚ
-//template<class T > bool not_equal_to<T>		//²»µÈÓÚ
-//template<class T > bool greater<T>			//´óÓÚ
-//template<class T > bool greater_equal<T>		//´óÓÚµÈÓÚ
-//template<class T > bool less<T>				//Ğ¡ÓÚ
-//template<class T > bool less_equal<T>			//Ğ¡ÓÚµÈÓÚ
+//template<class T > bool equal_to<T>           //ç­‰äº
+//template<class T > bool not_equal_to<T>		//ä¸ç­‰äº
+//template<class T > bool greater<T>			//å¤§äº
+//template<class T > bool greater_equal<T>		//å¤§äºç­‰äº
+//template<class T > bool less<T>				//å°äº
+//template<class T > bool less_equal<T>			//å°äºç­‰äº
 
 class MyCompare
 {
@@ -33,9 +33,9 @@ void test01()
 	}
 	std::cout << std::endl;
 
-	//×Ô¼ºÊµÏÖ·Âº¯Êı
+	//è‡ªå·±å®ç°ä»¿å‡½æ•°
 	//sort(v.begin(), v.end(), MyCompare());
-	//STLÄÚ½¨·Âº¯Êı  ´óÓÚ·Âº¯Êı
+	//STLå†…å»ºä»¿å‡½æ•°  å¤§äºä»¿å‡½æ•°
 	sort(v.begin(), v.end(), std::greater<int>());
 
 	for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++) {
@@ -48,3 +48,4 @@ int main()
 {
 	test01();
 }
+
