@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 模式1：仅运行当前文件（编译结果 build/main.exe）
+      "name": "运行当前文件",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/main.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "externalConsole": false,
+      "stopAtEntry": false,
+      "preLaunchTask": "编译当前文件"
+    },
+    {
+      // 模式2：运行当前文件夹（批量编译）
+      "name": "运行当前文件夹",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${relativeFileDirname}/main.exe",
+      "cwd": "${workspaceFolder}/${relativeFileDirname}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "externalConsole": false,
+      "stopAtEntry": false,
+      "internalConsoleOptions": "neverOpen",
+      "preLaunchTask": "编译当前文件夹"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ﻿#include<iostream>
+#include<deque>
 
 //deque.empty()              判断容器是否为空
 //deque.size()               返回容器中元素的个数
