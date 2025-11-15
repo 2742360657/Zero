@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include<vector>
-
+//测试
 int *getNext(std::string pattern)
 {
     int n = pattern.length();
