@@ -1,4 +1,5 @@
 ﻿#include<iostream>
+#include<stack>
 
 //构造函数：
 //stack< T > stk                 //stack采用模板类实现， stack对象的默认构造形式
