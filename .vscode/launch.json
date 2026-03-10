@@ -2,8 +2,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      // 模式1：仅运行当前文件（编译结果 build/main.exe）
-      "name": "运行当前文件",
+      // 模式1：仅运行当前文件（Windows）
+      "name": "运行当前文件(win)",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/main.exe",
@@ -13,21 +13,49 @@
       "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
       "externalConsole": false,
       "stopAtEntry": false,
-      "preLaunchTask": "编译当前文件"
+      "preLaunchTask": "编译当前文件(win)"
     },
     {
-      // 模式2：运行当前文件夹（批量编译）
-      "name": "运行当前文件夹",
+      // 模式1：仅运行当前文件（Linux）
+      "name": "运行当前文件(linux)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/main",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "stopAtEntry": false,
+      "preLaunchTask": "编译当前文件(linux)"
+    },
+    {
+      // 模式2：运行当前文件夹（Windows）
+      "name": "运行当前文件夹(win)",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/${relativeFileDirname}/main.exe",
       "cwd": "${workspaceFolder}/${relativeFileDirname}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
       "externalConsole": false,
       "stopAtEntry": false,
       "internalConsoleOptions": "neverOpen",
-      "preLaunchTask": "编译当前文件夹"
+      "preLaunchTask": "编译当前文件夹(win)"
+    },
+    {
+      // 模式2：运行当前文件夹（Linux）
+      "name": "运行当前文件夹(linux)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${relativeFileDirname}/main",
+      "cwd": "${workspaceFolder}/${relativeFileDirname}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "stopAtEntry": false,
+      "internalConsoleOptions": "neverOpen",
+      "preLaunchTask": "编译当前文件夹(linux)"
     }
   ]
 }

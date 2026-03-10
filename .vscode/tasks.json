@@ -2,8 +2,8 @@
   "version": "2.0.0",
   "tasks": [
     {
-      // 模式1：仅编译当前打开的 .cpp 文件
-      "label": "编译当前文件",
+      // 模式1：仅编译当前打开的 .cpp 文件（Windows）
+      "label": "编译当前文件(win)",
       "type": "shell",
       "command": "C:/msys64/ucrt64/bin/g++.exe",
       "args": [
@@ -23,8 +23,28 @@
       "group": { "kind": "build", "isDefault": true }
     },
     {
-      // 模式2：编译当前目录下所有.cpp → build/<folder>/main.exe
-      "label": "编译当前文件夹",
+      // 模式1：仅编译当前打开的 .cpp 文件（Linux）
+      "label": "编译当前文件(linux)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/main"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": false }
+    },
+    {
+      // 模式2：编译当前目录下所有.cpp → build/<folder>/main.exe（Windows）
+      "label": "编译当前文件夹(win)",
       "type": "shell",
       "command": "C:\\msys64\\usr\\bin\\bash.exe",
       "args": [
@@ -42,8 +62,23 @@
       }
     },
     {
-      // 清理任务：删除当前文件夹对应 build 输出
-      "label": "清理当前文件夹",
+      // 模式2：编译当前目录下所有.cpp → build/<folder>/main（Linux）
+      "label": "编译当前文件夹(linux)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -euo pipefail; d=\"${relativeFileDirname}\"; out=\"build/$d/main\"; mkdir -p \"build/$d\"; shopt -s nullglob; files=(\"$d\"/*.cpp); if [ ${#files[@]} -eq 0 ]; then echo \"[ERROR] No .cpp in $d\"; exit 2; fi; echo \"[FILES]\"; for f in \"${files[@]}\"; do echo \"  $f\"; done; g++ -std=c++17 -Wall -Wextra -g -I. -I\"$d\" \"${files[@]}\" -o \"$out\""
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": false },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      // 清理任务：删除当前文件夹对应 build 输出（Windows）
+      "label": "清理当前文件夹(win)",
       "type": "shell",
       "command": "C:\\msys64\\usr\\bin\\bash.exe",
       "args": [
@@ -56,6 +91,19 @@
           "MSYSTEM": "UCRT64",
           "CHERE_INVOKING": "1"
         }
+      }
+    },
+    {
+      // 清理任务：删除当前文件夹对应 build 输出（Linux）
+      "label": "清理当前文件夹(linux)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; d=\"${relativeFileDirname}\"; rm -rf \"build/$d\""
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
       }
     }
   ]
