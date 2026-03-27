@@ -10,7 +10,7 @@
       "args": [],
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "miDebuggerPath": "C:/MySoftWare/msys64/ucrt64/bin/gdb.exe",
       "externalConsole": false,
       "stopAtEntry": false,
       "preLaunchTask": "编译当前文件(win)"
@@ -37,7 +37,7 @@
       "program": "${workspaceFolder}/build/${relativeFileDirname}/main.exe",
       "cwd": "${workspaceFolder}/${relativeFileDirname}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "miDebuggerPath": "C:/MySoftWare/msys64/ucrt64/bin/gdb.exe",
       "externalConsole": false,
       "stopAtEntry": false,
       "internalConsoleOptions": "neverOpen",
